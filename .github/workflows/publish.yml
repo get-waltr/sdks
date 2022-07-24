@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     services:
-      generator-service:
+      generator:
         image: cmgriffing/gilfold-openapi-client-generator:skipper
         ports:
           - 8888:8080
