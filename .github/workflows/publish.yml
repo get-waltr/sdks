@@ -27,7 +27,7 @@ jobs:
 
           # The arguments for the `git rm` command (see the paragraph below for more info)
           # Default: ''
-          remove: "./sdks"
+          remove: "./sdks -r"
 
           # Arguments for the git tag command (the tag name always needs to be the first word not preceded by an hyphen)
           # Default: ''
