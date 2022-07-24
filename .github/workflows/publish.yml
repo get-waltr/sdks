@@ -18,3 +18,17 @@ jobs:
           version: 6.0.2
       - run: pnpm install
       - run: "ls && pnpm generate:script:ci"
+      - uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
+        with:
+          add: "./sdks"
+          commit: -f
+          default_author: github_actions
+          message: "SDK Release commit via GitHub Actions"
+
+          # Arguments for the git tag command (the tag name always needs to be the first word not preceded by an hyphen)
+          # Default: ''
+          # tag: "v1.0.0 --force"
+
+          # Arguments for the git push --tags command (any additional argument will be added after --tags)
+          # Default: ''
+          # tag_push: "--force"
