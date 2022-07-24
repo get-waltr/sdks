@@ -107,8 +107,8 @@ async function main() {
       console.log("Unzipping file");
       spawnSync(`unzip`, [`downloads/${language}.zip`]);
 
-      console.log("Moving file directory into sdks folder \n");
-      spawnSync("mv", [`${language}-client`, `./sdks/${language}`]);
+      console.log("Moving file directory into clients folder \n");
+      spawnSync("mv", [`${language}-client`, `./clients/${language}`]);
 
       await asyncTimeout(4000);
     }
