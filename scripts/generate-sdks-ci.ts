@@ -68,7 +68,7 @@ async function main() {
     console.log("Waiting for server to boot... \n");
     await asyncTimeout(10000);
 
-    const GEN_IP = "generator";
+    const GEN_IP = "localhost";
 
     for (let i = 0; i < languages.length; i++) {
       const language = languages[i];
