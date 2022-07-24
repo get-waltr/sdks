@@ -1,0 +1,37 @@
+{
+  "name": "gilfold-sdks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve:openapi": "serve -p 8889 .",
+    "serve:openapi:wait": "",
+    "generate:script": "ts-node scripts/generate-sdks-online.ts",
+    "generate:script:cli": "ts-node scripts/generate-sdks-cli.ts",
+    "generate:script:ci": "ts-node scripts/generate-sdks-ci.ts",
+    "generate": "wait-on -i 10000 http-get://localhost:8889 && pnpm generate",
+    "build": "npm-run-all -p serve:openapi generate",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.5.1",
+    "@types/fs-extra": "^9.0.13",
+    "@types/js-yaml": "^4.0.5",
+    "@types/localtunnel": "^2.0.1",
+    "@types/node": "^18.0.6",
+    "axios": "^0.27.2",
+    "chalk": "^4.1.2",
+    "fs-extra": "^10.1.0",
+    "js-yaml": "^4.1.0",
+    "localtunnel": "^2.0.2",
+    "ngrok": "^4.3.1",
+    "npm-run-all": "^4.1.5",
+    "serve": "^14.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4",
+    "wait-on": "^6.0.1"
+  }
+}

@@ -1,0 +1,16 @@
+name: Publish
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      generator-service:
+        image: cmgriffing/gilfold-openapi-client-generator:skipper
+        ports:
+          - 8888:8080
+
+    steps:
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 6.0.2
+      - run: "pnpx generate:script:ci"
