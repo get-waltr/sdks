@@ -51,6 +51,8 @@ async function main() {
     console.log("Removing old builds");
     fs.removeSync(path.resolve(process.cwd(), "sdks"));
     fs.mkdirSync(path.resolve(process.cwd(), "sdks"));
+    fs.removeSync(path.resolve(process.cwd(), "clients"));
+    fs.mkdirSync(path.resolve(process.cwd(), "clients"));
     fs.removeSync(path.resolve(process.cwd(), "downloads"));
     fs.mkdirSync(path.resolve(process.cwd(), "downloads"));
 
