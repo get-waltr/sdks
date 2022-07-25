@@ -26,11 +26,17 @@ Get Settings for a business
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: ApiKeyAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new OpenAPI\Client\Api\BusinessesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -51,7 +57,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -79,11 +85,17 @@ Use this to get the name and other business details. Here is a link: [to google]
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: ApiKeyAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new OpenAPI\Client\Api\BusinessesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -104,7 +116,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -132,11 +144,17 @@ Update Business Details
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: ApiKeyAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new OpenAPI\Client\Api\BusinessesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $patch_business_request = new \OpenAPI\Client\Model\PatchBusinessRequest(); // \OpenAPI\Client\Model\PatchBusinessRequest
 
@@ -160,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

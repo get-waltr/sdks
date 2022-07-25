@@ -21,6 +21,13 @@ Get an Account's current Usage Billing Rate Adjustments
 ```ruby
 require 'time'
 require 'openapi_client'
+# setup authorization
+OpenapiClient.configure do |config|
+  # Configure API key authorization: ApiKeyAuth
+  config.api_key['ApiKeyAuth'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+end
 
 api_instance = OpenapiClient::UsageApi.new
 
@@ -61,7 +68,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -82,6 +89,13 @@ Set an Account's Usage Billing Rate
 ```ruby
 require 'time'
 require 'openapi_client'
+# setup authorization
+OpenapiClient.configure do |config|
+  # Configure API key authorization: ApiKeyAuth
+  config.api_key['ApiKeyAuth'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+end
 
 api_instance = OpenapiClient::UsageApi.new
 post_account_usage_billing_rate_adjustment_request = OpenapiClient::PostAccountUsageBillingRateAdjustmentRequest.new({billing_cost: 3.56}) # PostAccountUsageBillingRateAdjustmentRequest | 
@@ -125,7 +139,7 @@ end
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

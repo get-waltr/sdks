@@ -2,9 +2,11 @@ openapi: 3.0.3
 info:
   description: ""
   title: ""
-  version: 0.0.1
+  version: 0.0.0
 servers:
 - url: /
+security:
+- ApiKeyAuth: []
 paths:
   /accounts:
     get:
@@ -1132,3 +1134,11 @@ components:
       - outgoingAmount
       - outgoingCount
       type: object
+  securitySchemes:
+    BearerAuth:
+      scheme: bearer
+      type: http
+    ApiKeyAuth:
+      in: header
+      name: X-API-Key
+      type: apiKey

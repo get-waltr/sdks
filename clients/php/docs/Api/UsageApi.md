@@ -25,11 +25,17 @@ Get an Account's current Usage Billing Rate Adjustments
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: ApiKeyAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new OpenAPI\Client\Api\UsageApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -50,7 +56,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -78,11 +84,17 @@ Set an Account's Usage Billing Rate
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: ApiKeyAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new OpenAPI\Client\Api\UsageApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $post_account_usage_billing_rate_adjustment_request = new \OpenAPI\Client\Model\PostAccountUsageBillingRateAdjustmentRequest(); // \OpenAPI\Client\Model\PostAccountUsageBillingRateAdjustmentRequest
 
@@ -106,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

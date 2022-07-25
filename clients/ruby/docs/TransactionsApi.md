@@ -25,6 +25,13 @@ Get all Transactions for a Business
 ```ruby
 require 'time'
 require 'openapi_client'
+# setup authorization
+OpenapiClient.configure do |config|
+  # Configure API key authorization: ApiKeyAuth
+  config.api_key['ApiKeyAuth'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+end
 
 api_instance = OpenapiClient::TransactionsApi.new
 
@@ -65,7 +72,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -86,6 +93,13 @@ Creates a Transaction for an Business
 ```ruby
 require 'time'
 require 'openapi_client'
+# setup authorization
+OpenapiClient.configure do |config|
+  # Configure API key authorization: ApiKeyAuth
+  config.api_key['ApiKeyAuth'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+end
 
 api_instance = OpenapiClient::TransactionsApi.new
 post_transaction_request = OpenapiClient::PostTransactionRequest.new({account_id: 'account_id_example', amount: 3.56}) # PostTransactionRequest | 
@@ -129,7 +143,7 @@ end
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -150,6 +164,13 @@ Get stats for all Transactions
 ```ruby
 require 'time'
 require 'openapi_client'
+# setup authorization
+OpenapiClient.configure do |config|
+  # Configure API key authorization: ApiKeyAuth
+  config.api_key['ApiKeyAuth'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+end
 
 api_instance = OpenapiClient::TransactionsApi.new
 
@@ -190,7 +211,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -211,6 +232,13 @@ Delete Transaction for an Business
 ```ruby
 require 'time'
 require 'openapi_client'
+# setup authorization
+OpenapiClient.configure do |config|
+  # Configure API key authorization: ApiKeyAuth
+  config.api_key['ApiKeyAuth'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+end
 
 api_instance = OpenapiClient::TransactionsApi.new
 
@@ -251,7 +279,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -272,6 +300,13 @@ Get a Transaction for a Business
 ```ruby
 require 'time'
 require 'openapi_client'
+# setup authorization
+OpenapiClient.configure do |config|
+  # Configure API key authorization: ApiKeyAuth
+  config.api_key['ApiKeyAuth'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+end
 
 api_instance = OpenapiClient::TransactionsApi.new
 
@@ -312,7 +347,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -333,6 +368,13 @@ Update a Transaction for a Business
 ```ruby
 require 'time'
 require 'openapi_client'
+# setup authorization
+OpenapiClient.configure do |config|
+  # Configure API key authorization: ApiKeyAuth
+  config.api_key['ApiKeyAuth'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+end
 
 api_instance = OpenapiClient::TransactionsApi.new
 patch_transaction_request = OpenapiClient::PatchTransactionRequest.new # PatchTransactionRequest | 
@@ -376,7 +418,7 @@ end
 
 ### Authorization
 
-No authorization required
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
