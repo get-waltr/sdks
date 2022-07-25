@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   description: ""
   title: ""
-  version: 0.0.0
+  version: 0.0.2
 servers:
 - url: /
 security:
@@ -1135,9 +1135,6 @@ components:
       - outgoingCount
       type: object
   securitySchemes:
-    BearerAuth:
-      scheme: bearer
-      type: http
     ApiKeyAuth:
       in: header
       name: X-API-Key
