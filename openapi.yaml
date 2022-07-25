@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: 0.0.2
+  version: 0.0.3
   title: ""
   description: ""
 paths:
@@ -688,6 +688,8 @@ paths:
                 $ref: "#/components/schemas/ErrorResponse"
       tags:
         - Transactions
+server:
+  - url: http://localhost:3333
 components:
   schemas:
     PostAccountRequest:
