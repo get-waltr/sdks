@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   description: ""
   title: ""
-  version: 0.0.2
+  version: 0.0.3
 servers:
 - url: /
 security:
