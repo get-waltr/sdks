@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: 0.0.0
+  version: 0.0.2
   title: ""
   description: ""
 paths:
@@ -1084,9 +1084,6 @@ components:
             - stripe
           type: string
   securitySchemes:
-    BearerAuth:
-      type: http
-      scheme: bearer
     ApiKeyAuth:
       type: apiKey
       in: header
