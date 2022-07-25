@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: 0.0.1
+  version: 0.0.0
   title: ""
   description: ""
 paths:
@@ -1083,3 +1083,13 @@ components:
             - paypal
             - stripe
           type: string
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+security:
+  - ApiKeyAuth: []
