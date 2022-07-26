@@ -2,9 +2,9 @@ openapi: 3.0.3
 info:
   description: ""
   title: ""
-  version: 0.0.3
+  version: 0.0.0
 servers:
-- url: /
+- url: http://localhost:3333
 security:
 - ApiKeyAuth: []
 paths:
@@ -737,8 +737,33 @@ components:
     ErrorResponse:
       additionalProperties: false
       properties:
-        message:
+        transactionId:
           type: string
+        accountId:
+          type: string
+        businessId:
+          type: string
+        amount:
+          type: number
+        note:
+          type: string
+        paymentProvider:
+          enum:
+          - stripe
+          type: string
+        paymentId:
+          type: string
+        createdAt:
+          type: number
+        modifiedAt:
+          type: number
+      required:
+      - accountId
+      - amount
+      - businessId
+      - createdAt
+      - modifiedAt
+      - transactionId
       type: object
     EmptyResponse:
       additionalProperties: false
@@ -760,7 +785,7 @@ components:
       properties:
         accounts:
           items:
-            $ref: '#/definitions/AccountResponse'
+            $ref: '#/components/schema/AccountResponse'
           type: array
       required:
       - accounts
@@ -820,7 +845,7 @@ components:
       properties:
         transactions:
           items:
-            $ref: '#/definitions/TransactionResponse'
+            $ref: '#/components/schema/TransactionResponse'
           type: array
       required:
       - transactions
@@ -911,7 +936,7 @@ components:
         accountsOverdraftable:
           type: boolean
         billingType:
-          $ref: '#/definitions/BillingType'
+          $ref: '#/components/schema/BillingType'
         paymentProviders:
           items:
             enum:
@@ -958,7 +983,7 @@ components:
         note:
           type: string
         paymentProvider:
-          $ref: '#/definitions/PaymentProvider'
+          $ref: '#/components/schema/PaymentProvider'
         paymentId:
           type: string
       required:
@@ -1064,7 +1089,7 @@ components:
         note:
           type: string
         paymentProvider:
-          $ref: '#/definitions/PaymentProvider'
+          $ref: '#/components/schema/PaymentProvider'
         paymentId:
           type: string
       type: object

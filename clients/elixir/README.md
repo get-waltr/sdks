@@ -30,5 +30,5 @@ be found at [https://hexdocs.pm/](https://hexdocs.pm/).
 
 You can override the URL of your server (e.g. if you have a separate development and production server in your configuration files.
 ```elixir
-config :, base_url: "http://localhost"
+config :, base_url: "http://localhost:3333"
 ```

@@ -7,7 +7,7 @@
 # General application configuration
 import Config
 
-config :, base_url: "http://localhost"
+config :, base_url: "http://localhost:3333"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
