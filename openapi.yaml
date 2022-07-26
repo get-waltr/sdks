@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: 0.0.3
+  version: 0.0.0
   title: ""
   description: ""
 paths:
@@ -688,7 +688,7 @@ paths:
                 $ref: "#/components/schemas/ErrorResponse"
       tags:
         - Transactions
-server:
+servers:
   - url: http://localhost:3333
 components:
   schemas:
@@ -727,9 +727,34 @@ components:
     ErrorResponse:
       type: object
       properties:
-        message:
+        transactionId:
           type: string
+        accountId:
+          type: string
+        businessId:
+          type: string
+        amount:
+          type: number
+        note:
+          type: string
+        paymentProvider:
+          type: string
+          enum:
+            - stripe
+        paymentId:
+          type: string
+        createdAt:
+          type: number
+        modifiedAt:
+          type: number
       additionalProperties: false
+      required:
+        - accountId
+        - amount
+        - businessId
+        - createdAt
+        - modifiedAt
+        - transactionId
     EmptyResponse:
       type: object
       additionalProperties: false
@@ -739,30 +764,10 @@ components:
         accounts:
           type: array
           items:
-            $ref: "#/definitions/AccountResponse"
+            $ref: "#/components/schema/AccountResponse"
       additionalProperties: false
       required:
         - accounts
-      definitions:
-        AccountResponse:
-          type: object
-          properties:
-            accountId:
-              type: string
-            name:
-              type: string
-            createdAt:
-              type: number
-            modifiedAt:
-              type: number
-            usageBillingRate:
-              type: number
-          additionalProperties: false
-          required:
-            - accountId
-            - createdAt
-            - modifiedAt
-            - usageBillingRate
     AccountStatsResponse:
       type: object
       properties:
@@ -805,42 +810,10 @@ components:
         transactions:
           type: array
           items:
-            $ref: "#/definitions/TransactionResponse"
+            $ref: "#/components/schema/TransactionResponse"
       additionalProperties: false
       required:
         - transactions
-      definitions:
-        TransactionResponse:
-          type: object
-          properties:
-            transactionId:
-              type: string
-            accountId:
-              type: string
-            businessId:
-              type: string
-            amount:
-              type: number
-            note:
-              type: string
-            paymentProvider:
-              type: string
-              enum:
-                - stripe
-            paymentId:
-              type: string
-            createdAt:
-              type: number
-            modifiedAt:
-              type: number
-          additionalProperties: false
-          required:
-            - accountId
-            - amount
-            - businessId
-            - createdAt
-            - modifiedAt
-            - transactionId
     PatchAccountRequest:
       type: object
       properties:
@@ -921,7 +894,7 @@ components:
         accountsOverdraftable:
           type: boolean
         billingType:
-          $ref: "#/definitions/BillingType"
+          $ref: "#/components/schema/BillingType"
         paymentProviders:
           type: array
           items:
@@ -942,12 +915,6 @@ components:
         paypalClientSecret:
           type: string
       additionalProperties: false
-      definitions:
-        BillingType:
-          enum:
-            - microTransaction
-            - usage
-          type: string
     PatchBusinessRequest:
       type: object
       properties:
@@ -967,19 +934,13 @@ components:
         note:
           type: string
         paymentProvider:
-          $ref: "#/definitions/PaymentProvider"
+          $ref: "#/components/schema/PaymentProvider"
         paymentId:
           type: string
       additionalProperties: false
       required:
         - accountId
         - amount
-      definitions:
-        PaymentProvider:
-          enum:
-            - paypal
-            - stripe
-          type: string
     TransactionResponse:
       type: object
       properties:
@@ -1075,16 +1036,10 @@ components:
         note:
           type: string
         paymentProvider:
-          $ref: "#/definitions/PaymentProvider"
+          $ref: "#/components/schema/PaymentProvider"
         paymentId:
           type: string
       additionalProperties: false
-      definitions:
-        PaymentProvider:
-          enum:
-            - paypal
-            - stripe
-          type: string
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
