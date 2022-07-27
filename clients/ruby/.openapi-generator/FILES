@@ -15,6 +15,7 @@ docs/AccountUsageBillingAdjustmentsResponseAdjustmentsInner.md
 docs/AccountsApi.md
 docs/AllAccountsResponse.md
 docs/AllTransactionsResponse.md
+docs/BillingType.md
 docs/BusinessResponse.md
 docs/BusinessSettingsResponse.md
 docs/BusinessesApi.md
@@ -23,6 +24,7 @@ docs/PatchAccountRequest.md
 docs/PatchBusinessRequest.md
 docs/PatchBusinessSettingsRequest.md
 docs/PatchTransactionRequest.md
+docs/PaymentProvider.md
 docs/PostAccountRequest.md
 docs/PostAccountUsageBillingRateAdjustmentRequest.md
 docs/PostTransactionRequest.md
@@ -47,6 +49,7 @@ lib/openapi_client/models/account_usage_billing_adjustments_response.rb
 lib/openapi_client/models/account_usage_billing_adjustments_response_adjustments_inner.rb
 lib/openapi_client/models/all_accounts_response.rb
 lib/openapi_client/models/all_transactions_response.rb
+lib/openapi_client/models/billing_type.rb
 lib/openapi_client/models/business_response.rb
 lib/openapi_client/models/business_settings_response.rb
 lib/openapi_client/models/error_response.rb
@@ -54,6 +57,7 @@ lib/openapi_client/models/patch_account_request.rb
 lib/openapi_client/models/patch_business_request.rb
 lib/openapi_client/models/patch_business_settings_request.rb
 lib/openapi_client/models/patch_transaction_request.rb
+lib/openapi_client/models/payment_provider.rb
 lib/openapi_client/models/post_account_request.rb
 lib/openapi_client/models/post_account_usage_billing_rate_adjustment_request.rb
 lib/openapi_client/models/post_transaction_request.rb
@@ -75,6 +79,7 @@ spec/models/account_usage_billing_adjustments_response_adjustments_inner_spec.rb
 spec/models/account_usage_billing_adjustments_response_spec.rb
 spec/models/all_accounts_response_spec.rb
 spec/models/all_transactions_response_spec.rb
+spec/models/billing_type_spec.rb
 spec/models/business_response_spec.rb
 spec/models/business_settings_response_spec.rb
 spec/models/error_response_spec.rb
@@ -82,6 +87,7 @@ spec/models/patch_account_request_spec.rb
 spec/models/patch_business_request_spec.rb
 spec/models/patch_business_settings_request_spec.rb
 spec/models/patch_transaction_request_spec.rb
+spec/models/payment_provider_spec.rb
 spec/models/post_account_request_spec.rb
 spec/models/post_account_usage_billing_rate_adjustment_request_spec.rb
 spec/models/post_transaction_request_spec.rb

@@ -17,6 +17,7 @@ lib/model/account_usage_billing_adjustments_response.ex
 lib/model/account_usage_billing_adjustments_response_adjustments_inner.ex
 lib/model/all_accounts_response.ex
 lib/model/all_transactions_response.ex
+lib/model/billing_type.ex
 lib/model/business_response.ex
 lib/model/business_settings_response.ex
 lib/model/error_response.ex
@@ -24,6 +25,7 @@ lib/model/patch_account_request.ex
 lib/model/patch_business_request.ex
 lib/model/patch_business_settings_request.ex
 lib/model/patch_transaction_request.ex
+lib/model/payment_provider.ex
 lib/model/post_account_request.ex
 lib/model/post_account_usage_billing_rate_adjustment_request.ex
 lib/model/post_transaction_request.ex

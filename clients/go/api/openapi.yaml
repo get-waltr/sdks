@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   description: ""
   title: ""
-  version: 0.0.0
+  version: 0.0.42
 servers:
 - url: http://localhost:3333
 security:
@@ -785,7 +785,7 @@ components:
       properties:
         accounts:
           items:
-            $ref: '#/components/schema/AccountResponse'
+            $ref: '#/components/schemas/AccountResponse'
           type: array
       required:
       - accounts
@@ -820,6 +820,47 @@ components:
       - monthly
       - total
       type: object
+    TransactionResponse:
+      additionalProperties: false
+      example:
+        accountId: accountId
+        note: note
+        createdAt: 6.027456183070403
+        amount: 0.8008281904610115
+        paymentProvider: stripe
+        paymentId: paymentId
+        modifiedAt: 1.4658129805029452
+        businessId: businessId
+        transactionId: transactionId
+      properties:
+        transactionId:
+          type: string
+        accountId:
+          type: string
+        businessId:
+          type: string
+        amount:
+          type: number
+        note:
+          type: string
+        paymentProvider:
+          enum:
+          - stripe
+          type: string
+        paymentId:
+          type: string
+        createdAt:
+          type: number
+        modifiedAt:
+          type: number
+      required:
+      - accountId
+      - amount
+      - businessId
+      - createdAt
+      - modifiedAt
+      - transactionId
+      type: object
     AllTransactionsResponse:
       additionalProperties: false
       example:
@@ -845,7 +886,7 @@ components:
       properties:
         transactions:
           items:
-            $ref: '#/components/schema/TransactionResponse'
+            $ref: '#/components/schemas/TransactionResponse'
           type: array
       required:
       - transactions
@@ -926,6 +967,11 @@ components:
       - currencyLabel
       - currencyLabelSuffixed
       type: object
+    BillingType:
+      enum:
+      - microTransaction
+      - usage
+      type: string
     PatchBusinessSettingsRequest:
       additionalProperties: false
       properties:
@@ -936,7 +982,7 @@ components:
         accountsOverdraftable:
           type: boolean
         billingType:
-          $ref: '#/components/schema/BillingType'
+          $ref: '#/components/schemas/BillingType'
         paymentProviders:
           items:
             enum:
@@ -967,13 +1013,18 @@ components:
             \ link: [to google](https://www.google.com)"
           type: string
       type: object
+    PaymentProvider:
+      enum:
+      - paypal
+      - stripe
+      type: string
     PostTransactionRequest:
       additionalProperties: false
       example:
         accountId: accountId
         note: note
         amount: 0.8008281904610115
-        paymentProvider: "{}"
+        paymentProvider: null
         paymentId: paymentId
       properties:
         accountId:
@@ -983,53 +1034,12 @@ components:
         note:
           type: string
         paymentProvider:
-          $ref: '#/components/schema/PaymentProvider'
+          $ref: '#/components/schemas/PaymentProvider'
         paymentId:
           type: string
       required:
       - accountId
       - amount
-      type: object
-    TransactionResponse:
-      additionalProperties: false
-      example:
-        accountId: accountId
-        note: note
-        createdAt: 6.027456183070403
-        amount: 0.8008281904610115
-        paymentProvider: stripe
-        paymentId: paymentId
-        modifiedAt: 1.4658129805029452
-        businessId: businessId
-        transactionId: transactionId
-      properties:
-        transactionId:
-          type: string
-        accountId:
-          type: string
-        businessId:
-          type: string
-        amount:
-          type: number
-        note:
-          type: string
-        paymentProvider:
-          enum:
-          - stripe
-          type: string
-        paymentId:
-          type: string
-        createdAt:
-          type: number
-        modifiedAt:
-          type: number
-      required:
-      - accountId
-      - amount
-      - businessId
-      - createdAt
-      - modifiedAt
-      - transactionId
       type: object
     TransactionStatsResponse:
       additionalProperties: false
@@ -1079,7 +1089,7 @@ components:
         accountId: accountId
         note: note
         amount: 0.8008281904610115
-        paymentProvider: "{}"
+        paymentProvider: null
         paymentId: paymentId
       properties:
         accountId:
@@ -1089,7 +1099,7 @@ components:
         note:
           type: string
         paymentProvider:
-          $ref: '#/components/schema/PaymentProvider'
+          $ref: '#/components/schemas/PaymentProvider'
         paymentId:
           type: string
       type: object

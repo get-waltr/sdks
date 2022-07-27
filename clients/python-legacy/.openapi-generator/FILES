@@ -11,6 +11,7 @@ docs/AccountUsageBillingAdjustmentsResponseAdjustmentsInner.md
 docs/AccountsApi.md
 docs/AllAccountsResponse.md
 docs/AllTransactionsResponse.md
+docs/BillingType.md
 docs/BusinessResponse.md
 docs/BusinessSettingsResponse.md
 docs/BusinessesApi.md
@@ -19,6 +20,7 @@ docs/PatchAccountRequest.md
 docs/PatchBusinessRequest.md
 docs/PatchBusinessSettingsRequest.md
 docs/PatchTransactionRequest.md
+docs/PaymentProvider.md
 docs/PostAccountRequest.md
 docs/PostAccountUsageBillingRateAdjustmentRequest.md
 docs/PostTransactionRequest.md
@@ -45,6 +47,7 @@ openapi_client/models/account_usage_billing_adjustments_response.py
 openapi_client/models/account_usage_billing_adjustments_response_adjustments_inner.py
 openapi_client/models/all_accounts_response.py
 openapi_client/models/all_transactions_response.py
+openapi_client/models/billing_type.py
 openapi_client/models/business_response.py
 openapi_client/models/business_settings_response.py
 openapi_client/models/error_response.py
@@ -52,6 +55,7 @@ openapi_client/models/patch_account_request.py
 openapi_client/models/patch_business_request.py
 openapi_client/models/patch_business_settings_request.py
 openapi_client/models/patch_transaction_request.py
+openapi_client/models/payment_provider.py
 openapi_client/models/post_account_request.py
 openapi_client/models/post_account_usage_billing_rate_adjustment_request.py
 openapi_client/models/post_transaction_request.py
@@ -72,6 +76,7 @@ test/test_account_usage_billing_adjustments_response_adjustments_inner.py
 test/test_accounts_api.py
 test/test_all_accounts_response.py
 test/test_all_transactions_response.py
+test/test_billing_type.py
 test/test_business_response.py
 test/test_business_settings_response.py
 test/test_businesses_api.py
@@ -80,6 +85,7 @@ test/test_patch_account_request.py
 test/test_patch_business_request.py
 test/test_patch_business_settings_request.py
 test/test_patch_transaction_request.py
+test/test_payment_provider.py
 test/test_post_account_request.py
 test/test_post_account_usage_billing_rate_adjustment_request.py
 test/test_post_transaction_request.py

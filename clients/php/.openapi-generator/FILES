@@ -15,6 +15,7 @@ docs/Model/AccountUsageBillingAdjustmentsResponse.md
 docs/Model/AccountUsageBillingAdjustmentsResponseAdjustmentsInner.md
 docs/Model/AllAccountsResponse.md
 docs/Model/AllTransactionsResponse.md
+docs/Model/BillingType.md
 docs/Model/BusinessResponse.md
 docs/Model/BusinessSettingsResponse.md
 docs/Model/ErrorResponse.md
@@ -22,6 +23,7 @@ docs/Model/PatchAccountRequest.md
 docs/Model/PatchBusinessRequest.md
 docs/Model/PatchBusinessSettingsRequest.md
 docs/Model/PatchTransactionRequest.md
+docs/Model/PaymentProvider.md
 docs/Model/PostAccountRequest.md
 docs/Model/PostAccountUsageBillingRateAdjustmentRequest.md
 docs/Model/PostTransactionRequest.md
@@ -43,6 +45,7 @@ lib/Model/AccountUsageBillingAdjustmentsResponse.php
 lib/Model/AccountUsageBillingAdjustmentsResponseAdjustmentsInner.php
 lib/Model/AllAccountsResponse.php
 lib/Model/AllTransactionsResponse.php
+lib/Model/BillingType.php
 lib/Model/BusinessResponse.php
 lib/Model/BusinessSettingsResponse.php
 lib/Model/ErrorResponse.php
@@ -51,6 +54,7 @@ lib/Model/PatchAccountRequest.php
 lib/Model/PatchBusinessRequest.php
 lib/Model/PatchBusinessSettingsRequest.php
 lib/Model/PatchTransactionRequest.php
+lib/Model/PaymentProvider.php
 lib/Model/PostAccountRequest.php
 lib/Model/PostAccountUsageBillingRateAdjustmentRequest.php
 lib/Model/PostTransactionRequest.php
@@ -70,6 +74,7 @@ test/Model/AccountUsageBillingAdjustmentsResponseAdjustmentsInnerTest.php
 test/Model/AccountUsageBillingAdjustmentsResponseTest.php
 test/Model/AllAccountsResponseTest.php
 test/Model/AllTransactionsResponseTest.php
+test/Model/BillingTypeTest.php
 test/Model/BusinessResponseTest.php
 test/Model/BusinessSettingsResponseTest.php
 test/Model/ErrorResponseTest.php
@@ -77,6 +82,7 @@ test/Model/PatchAccountRequestTest.php
 test/Model/PatchBusinessRequestTest.php
 test/Model/PatchBusinessSettingsRequestTest.php
 test/Model/PatchTransactionRequestTest.php
+test/Model/PaymentProviderTest.php
 test/Model/PostAccountRequestTest.php
 test/Model/PostAccountUsageBillingRateAdjustmentRequestTest.php
 test/Model/PostTransactionRequestTest.php
