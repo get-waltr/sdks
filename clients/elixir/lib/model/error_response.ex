@@ -9,11 +9,27 @@ defmodule .Model.ErrorResponse do
 
   @derive [Poison.Encoder]
   defstruct [
-    :message
+    :transactionId,
+    :accountId,
+    :businessId,
+    :amount,
+    :note,
+    :paymentProvider,
+    :paymentId,
+    :createdAt,
+    :modifiedAt
   ]
 
   @type t :: %__MODULE__{
-    :message => String.t | nil
+    :transactionId => String.t,
+    :accountId => String.t,
+    :businessId => String.t,
+    :amount => float(),
+    :note => String.t | nil,
+    :paymentProvider => String.t | nil,
+    :paymentId => String.t | nil,
+    :createdAt => float(),
+    :modifiedAt => float()
   }
 end
 
