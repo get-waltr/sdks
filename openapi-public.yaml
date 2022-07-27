@@ -762,9 +762,24 @@ components:
       type: object
       properties:
         accounts:
-          type: array
-          items:
-            $ref: "#/components/schemas/AccountResponse"
+          additionalProperties: false
+          type: object
+          properties:
+            Items:
+              $ref: "#/components/schemas/AccountResponse"
+            Count:
+              type: number
+            ScannedCount:
+              type: number
+            LastEvaluatedKey:
+              type: object
+              additionalProperties:
+                type: string
+          required:
+            - Count
+            - Items
+            - LastEvaluatedKey
+            - ScannedCount
       additionalProperties: false
       required:
         - accounts
@@ -839,9 +854,24 @@ components:
       type: object
       properties:
         transactions:
-          type: array
-          items:
-            $ref: "#/components/schemas/TransactionResponse"
+          additionalProperties: false
+          type: object
+          properties:
+            Items:
+              $ref: "#/components/schemas/TransactionResponse"
+            Count:
+              type: number
+            ScannedCount:
+              type: number
+            LastEvaluatedKey:
+              type: object
+              additionalProperties:
+                type: string
+          required:
+            - Count
+            - Items
+            - LastEvaluatedKey
+            - ScannedCount
       additionalProperties: false
       required:
         - transactions
