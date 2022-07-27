@@ -1,0 +1,1059 @@
+openapi: 3.0.3
+info:
+  version: 0.0.7
+  title: ""
+  description: ""
+paths:
+  /accounts:
+    post:
+      summary: Create an Account for a Business
+      description: Create an Account for a Business
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccountResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "409":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Accounts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PostAccountRequest"
+    get:
+      summary: Get all Accounts for a Business
+      description: Get all Accounts for a Business
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AllAccountsResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Accounts
+  /accounts/:accountId:
+    delete:
+      summary: Delete an Account of a Business
+      description: Delete an Account of a Business
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EmptyResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Accounts
+    get:
+      summary: Get an account for a Business
+      description: Get an account for a Business
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccountResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Accounts
+    patch:
+      summary: Update Account for Business
+      description: Update Account for Business
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccountResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Accounts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PatchAccountRequest"
+  /accounts/stats:
+    get:
+      summary: Get stats for all accounts
+      description: Get stats for all accounts
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccountStatsResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Accounts
+  /accounts/:accountId/transactions:
+    get:
+      summary: Get Transactions for an Account
+      description: Get Transactions for an Account
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AllTransactionsResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Accounts
+  /accounts/:accountId/usage:
+    get:
+      summary: Get an Account's current Usage Billing Rate Adjustments
+      description: Get an Account's current Usage Billing Rate Adjustments
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccountUsageBillingAdjustmentsResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Usage
+    post:
+      summary: Set an Account's Usage Billing Rate
+      description: Set an Account's Usage Billing Rate
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EmptyResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Usage
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PostAccountUsageBillingRateAdjustmentRequest"
+  /businesses/:businessId:
+    get:
+      summary: Get Business Details
+      description: >
+
+        Use this to get the name and other business details. Here is a link: [to google](https://google.com). Let's see if it works.
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "403":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Businesses
+    patch:
+      summary: Update Business Details
+      description: Update Business Details
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "403":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Businesses
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PatchBusinessRequest"
+  /business/:businessId/settings:
+    get:
+      summary: Get Settings for a business
+      description: Get Settings for a business
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessSettingsResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "403":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Businesses
+  /transactions:
+    post:
+      summary: Creates a Transaction for an Business
+      description: Creates a Transaction for an Business
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TransactionResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Transactions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PostTransactionRequest"
+    get:
+      summary: Get all Transactions for a Business
+      description: Get all Transactions for a Business
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AllTransactionsResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Transactions
+  /transactions/:transactionId:
+    delete:
+      summary: Delete Transaction for an Business
+      description: Delete Transaction for an Business
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EmptyResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "403":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Transactions
+    get:
+      summary: Get a Transaction for a Business
+      description: Get a Transaction for a Business
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TransactionResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "403":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Transactions
+    patch:
+      summary: Update a Transaction for a Business
+      description: Update a Transaction for a Business
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TransactionResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "401":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "403":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "404":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Transactions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PatchTransactionRequest"
+  /transactions/stats:
+    get:
+      summary: Get stats for all Transactions
+      description: Get stats for all Transactions
+      responses:
+        "200":
+          description: Response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TransactionStatsResponse"
+        "400":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+      tags:
+        - Transactions
+servers:
+  - url: http://localhost:3333
+components:
+  schemas:
+    PostAccountRequest:
+      type: object
+      properties:
+        accountId:
+          description:
+            This is your own internal account ID. We will index it based upon
+            your business ID.
+          type: string
+        name:
+          type: string
+      additionalProperties: false
+      required:
+        - accountId
+    AccountResponse:
+      type: object
+      properties:
+        accountId:
+          type: string
+        name:
+          type: string
+        createdAt:
+          type: number
+        modifiedAt:
+          type: number
+        usageBillingRate:
+          type: number
+      additionalProperties: false
+      required:
+        - accountId
+        - createdAt
+        - modifiedAt
+        - usageBillingRate
+    ErrorResponse:
+      type: object
+      properties:
+        transactionId:
+          type: string
+        accountId:
+          type: string
+        businessId:
+          type: string
+        amount:
+          type: number
+        note:
+          type: string
+        paymentProvider:
+          type: string
+          enum:
+            - stripe
+        paymentId:
+          type: string
+        createdAt:
+          type: number
+        modifiedAt:
+          type: number
+      additionalProperties: false
+      required:
+        - accountId
+        - amount
+        - businessId
+        - createdAt
+        - modifiedAt
+        - transactionId
+    EmptyResponse:
+      type: object
+      additionalProperties: false
+    AllAccountsResponse:
+      type: object
+      properties:
+        accounts:
+          type: array
+          items:
+            $ref: "#/components/schemas/AccountResponse"
+      additionalProperties: false
+      required:
+        - accounts
+    AccountStatsResponse:
+      type: object
+      properties:
+        total:
+          type: number
+        daily:
+          type: array
+          items:
+            type: object
+            properties:
+              date:
+                type: string
+              amount:
+                type: number
+            additionalProperties: false
+            required:
+              - amount
+              - date
+        monthly:
+          type: array
+          items:
+            type: object
+            properties:
+              date:
+                type: string
+              amount:
+                type: number
+            additionalProperties: false
+            required:
+              - amount
+              - date
+      additionalProperties: false
+      required:
+        - daily
+        - monthly
+        - total
+    TransactionResponse:
+      type: object
+      properties:
+        transactionId:
+          type: string
+        accountId:
+          type: string
+        businessId:
+          type: string
+        amount:
+          type: number
+        note:
+          type: string
+        paymentProvider:
+          type: string
+          enum:
+            - stripe
+        paymentId:
+          type: string
+        createdAt:
+          type: number
+        modifiedAt:
+          type: number
+      additionalProperties: false
+      required:
+        - accountId
+        - amount
+        - businessId
+        - createdAt
+        - modifiedAt
+        - transactionId
+    AllTransactionsResponse:
+      type: object
+      properties:
+        transactions:
+          type: array
+          items:
+            $ref: "#/components/schemas/TransactionResponse"
+      additionalProperties: false
+      required:
+        - transactions
+    PatchAccountRequest:
+      type: object
+      properties:
+        accountName:
+          type: string
+      additionalProperties: false
+    AccountUsageBillingAdjustmentsResponse:
+      type: object
+      properties:
+        adjustments:
+          type: array
+          items:
+            type: object
+            properties:
+              billingId:
+                type: string
+              accountId:
+                type: string
+              hourlyCost:
+                type: number
+              createdAt:
+                type: number
+              modifiedAt:
+                type: number
+            additionalProperties: false
+            required:
+              - accountId
+              - billingId
+              - createdAt
+              - hourlyCost
+              - modifiedAt
+      additionalProperties: false
+      required:
+        - adjustments
+    PostAccountUsageBillingRateAdjustmentRequest:
+      type: object
+      properties:
+        billingCost:
+          type: number
+      additionalProperties: false
+      required:
+        - billingCost
+    BusinessResponse:
+      type: object
+      properties:
+        businessId:
+          type: string
+        name:
+          type: string
+      additionalProperties: false
+      required:
+        - businessId
+        - name
+    BusinessSettingsResponse:
+      type: object
+      properties:
+        businessId:
+          type: string
+        currencyLabel:
+          type: string
+        currencyLabelSuffixed:
+          type: boolean
+        accountsOverdraftable:
+          type: boolean
+      additionalProperties: false
+      required:
+        - accountsOverdraftable
+        - businessId
+        - currencyLabel
+        - currencyLabelSuffixed
+    BillingType:
+      enum:
+        - microTransaction
+        - usage
+      type: string
+    PatchBusinessSettingsRequest:
+      type: object
+      properties:
+        currencyLabel:
+          type: string
+        currencyLabelSuffixed:
+          type: boolean
+        accountsOverdraftable:
+          type: boolean
+        billingType:
+          $ref: "#/components/schemas/BillingType"
+        paymentProviders:
+          type: array
+          items:
+            enum:
+              - paypal
+              - stripe
+            type: string
+        stripeSandboxPublishableKey:
+          type: string
+        stripeSandboxSecretKey:
+          type: string
+        stripePublishableKey:
+          type: string
+        stripeSecretKey:
+          type: string
+        paypalClientId:
+          type: string
+        paypalClientSecret:
+          type: string
+      additionalProperties: false
+    PatchBusinessRequest:
+      type: object
+      properties:
+        name:
+          description:
+            "I am curious to see if this works with markdown like this link:
+            [to google](https://www.google.com)"
+          type: string
+      additionalProperties: false
+    PaymentProvider:
+      enum:
+        - paypal
+        - stripe
+      type: string
+    PostTransactionRequest:
+      type: object
+      properties:
+        accountId:
+          type: string
+        amount:
+          type: number
+        note:
+          type: string
+        paymentProvider:
+          $ref: "#/components/schemas/PaymentProvider"
+        paymentId:
+          type: string
+      additionalProperties: false
+      required:
+        - accountId
+        - amount
+    TransactionStatsResponse:
+      type: object
+      properties:
+        total:
+          type: number
+        daily:
+          type: array
+          items:
+            type: object
+            properties:
+              date:
+                type: string
+              incomingAmount:
+                type: number
+              outgoingAmount:
+                type: number
+              incomingCount:
+                type: number
+              outgoingCount:
+                type: number
+            additionalProperties: false
+            required:
+              - date
+              - incomingAmount
+              - incomingCount
+              - outgoingAmount
+              - outgoingCount
+        monthly:
+          type: array
+          items:
+            type: object
+            properties:
+              date:
+                type: string
+              incomingAmount:
+                type: number
+              outgoingAmount:
+                type: number
+              incomingCount:
+                type: number
+              outgoingCount:
+                type: number
+            additionalProperties: false
+            required:
+              - date
+              - incomingAmount
+              - incomingCount
+              - outgoingAmount
+              - outgoingCount
+      additionalProperties: false
+      required:
+        - daily
+        - monthly
+        - total
+    PatchTransactionRequest:
+      type: object
+      properties:
+        accountId:
+          type: string
+        amount:
+          type: number
+        note:
+          type: string
+        paymentProvider:
+          $ref: "#/components/schemas/PaymentProvider"
+        paymentId:
+          type: string
+      additionalProperties: false
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+security:
+  - ApiKeyAuth: []
