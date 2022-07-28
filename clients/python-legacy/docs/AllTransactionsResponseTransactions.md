@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**TransactionResponse**](TransactionResponse.md) |  | 
+**items** | [**list[TransactionResponse]**](TransactionResponse.md) |  | 
 **count** | **float** |  | 
 **scanned_count** | **float** |  | 
 **last_evaluated_key** | **dict(str, str)** |  | 

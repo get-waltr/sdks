@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**AccountResponse**](AccountResponse.md) |  | 
+**items** | [**list[AccountResponse]**](AccountResponse.md) |  | 
 **count** | **float** |  | 
 **scanned_count** | **float** |  | 
 **last_evaluated_key** | **dict(str, str)** |  | 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**AccountResponse**](AccountResponse.md) |  | 
+**Items** | [**[]AccountResponse**](AccountResponse.md) |  | 
 **Count** | **float32** |  | 
 **ScannedCount** | **float32** |  | 
 **LastEvaluatedKey** | **map[string]string** |  | 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewAllAccountsResponseAccounts
 
-`func NewAllAccountsResponseAccounts(items AccountResponse, count float32, scannedCount float32, lastEvaluatedKey map[string]string, ) *AllAccountsResponseAccounts`
+`func NewAllAccountsResponseAccounts(items []AccountResponse, count float32, scannedCount float32, lastEvaluatedKey map[string]string, ) *AllAccountsResponseAccounts`
 
 NewAllAccountsResponseAccounts instantiates a new AllAccountsResponseAccounts object
 This constructor will assign default values to properties that have it defined,
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *AllAccountsResponseAccounts) GetItems() AccountResponse`
+`func (o *AllAccountsResponseAccounts) GetItems() []AccountResponse`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *AllAccountsResponseAccounts) GetItemsOk() (*AccountResponse, bool)`
+`func (o *AllAccountsResponseAccounts) GetItemsOk() (*[]AccountResponse, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *AllAccountsResponseAccounts) SetItems(v AccountResponse)`
+`func (o *AllAccountsResponseAccounts) SetItems(v []AccountResponse)`
 
 SetItems sets Items field to given value.
 

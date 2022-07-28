@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   description: ""
   title: ""
-  version: 0.0.10
+  version: 0.0.11
 servers:
 - url: http://localhost:3333
 security:
@@ -785,7 +785,15 @@ components:
         total: 9.301444243932576
         accounts:
           Items:
-            accountId: accountId
+          - accountId: accountId
+            createdAt: 0.8008281904610115
+            usageBillingRate: 5.962133916683182
+            remainingHoursOnBalance: 5.637376656633329
+            balance: 1.4658129805029452
+            accountName: accountName
+            modifiedAt: 6.027456183070403
+            businessId: businessId
+          - accountId: accountId
             createdAt: 0.8008281904610115
             usageBillingRate: 5.962133916683182
             remainingHoursOnBalance: 5.637376656633329
@@ -883,7 +891,16 @@ components:
         total: 2.3021358869347655
         transactions:
           Items:
-            accountId: accountId
+          - accountId: accountId
+            note: note
+            createdAt: 6.027456183070403
+            amount: 0.8008281904610115
+            paymentProvider: stripe
+            paymentId: paymentId
+            modifiedAt: 1.4658129805029452
+            businessId: businessId
+            transactionId: transactionId
+          - accountId: accountId
             note: note
             createdAt: 6.027456183070403
             amount: 0.8008281904610115
@@ -1121,7 +1138,15 @@ components:
       additionalProperties: false
       example:
         Items:
-          accountId: accountId
+        - accountId: accountId
+          createdAt: 0.8008281904610115
+          usageBillingRate: 5.962133916683182
+          remainingHoursOnBalance: 5.637376656633329
+          balance: 1.4658129805029452
+          accountName: accountName
+          modifiedAt: 6.027456183070403
+          businessId: businessId
+        - accountId: accountId
           createdAt: 0.8008281904610115
           usageBillingRate: 5.962133916683182
           remainingHoursOnBalance: 5.637376656633329
@@ -1135,7 +1160,9 @@ components:
           key: LastEvaluatedKey
       properties:
         Items:
-          $ref: '#/components/schemas/AccountResponse'
+          items:
+            $ref: '#/components/schemas/AccountResponse'
+          type: array
         Count:
           type: number
         ScannedCount:
@@ -1168,7 +1195,16 @@ components:
       additionalProperties: false
       example:
         Items:
-          accountId: accountId
+        - accountId: accountId
+          note: note
+          createdAt: 6.027456183070403
+          amount: 0.8008281904610115
+          paymentProvider: stripe
+          paymentId: paymentId
+          modifiedAt: 1.4658129805029452
+          businessId: businessId
+          transactionId: transactionId
+        - accountId: accountId
           note: note
           createdAt: 6.027456183070403
           amount: 0.8008281904610115
@@ -1183,7 +1219,9 @@ components:
           key: LastEvaluatedKey
       properties:
         Items:
-          $ref: '#/components/schemas/TransactionResponse'
+          items:
+            $ref: '#/components/schemas/TransactionResponse'
+          type: array
         Count:
           type: number
         ScannedCount:

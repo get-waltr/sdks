@@ -16,7 +16,7 @@ defmodule .Model.AllAccountsResponseAccounts do
   ]
 
   @type t :: %__MODULE__{
-    :Items => .Model.AccountResponse.t,
+    :Items => [.Model.AccountResponse.t],
     :Count => float(),
     :ScannedCount => float(),
     :LastEvaluatedKey => %{optional(String.t) => String.t}
@@ -27,7 +27,7 @@ defimpl Poison.Decoder, for: .Model.AllAccountsResponseAccounts do
   import .Deserializer
   def decode(value, options) do
     value
-    |> deserialize(:Items, :struct, .Model.AccountResponse, options)
+    |> deserialize(:Items, :list, .Model.AccountResponse, options)
   end
 end
 

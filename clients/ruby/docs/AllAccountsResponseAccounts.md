@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **items** | [**AccountResponse**](AccountResponse.md) |  |  |
+| **items** | [**Array&lt;AccountResponse&gt;**](AccountResponse.md) |  |  |
 | **count** | **Float** |  |  |
 | **scanned_count** | **Float** |  |  |
 | **last_evaluated_key** | **Hash&lt;String, String&gt;** |  |  |

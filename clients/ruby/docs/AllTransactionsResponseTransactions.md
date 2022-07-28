@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **items** | [**TransactionResponse**](TransactionResponse.md) |  |  |
+| **items** | [**Array&lt;TransactionResponse&gt;**](TransactionResponse.md) |  |  |
 | **count** | **Float** |  |  |
 | **scanned_count** | **Float** |  |  |
 | **last_evaluated_key** | **Hash&lt;String, String&gt;** |  |  |

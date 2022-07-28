@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**\OpenAPI\Client\Model\AccountResponse**](AccountResponse.md) |  |
+**items** | [**\OpenAPI\Client\Model\AccountResponse[]**](AccountResponse.md) |  |
 **count** | **float** |  |
 **scanned_count** | **float** |  |
 **last_evaluated_key** | **array<string,string>** |  |
