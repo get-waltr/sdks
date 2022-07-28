@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: 0.0.9
+  version: 0.0.10
   title: ""
   description: ""
 paths:
@@ -707,19 +707,27 @@ components:
     AccountResponse:
       type: object
       properties:
+        businessId:
+          type: string
         accountId:
           type: string
-        name:
+        accountName:
           type: string
         createdAt:
           type: number
         modifiedAt:
           type: number
+        balance:
+          type: number
         usageBillingRate:
+          type: number
+        remainingHoursOnBalance:
           type: number
       additionalProperties: false
       required:
         - accountId
+        - balance
+        - businessId
         - createdAt
         - modifiedAt
         - usageBillingRate
