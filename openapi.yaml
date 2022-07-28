@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: 0.0.42
+  version: 0.0.9
   title: ""
   description: ""
 paths:
@@ -696,8 +696,7 @@ components:
       type: object
       properties:
         accountId:
-          description:
-            This is your own internal account ID. We will index it based upon
+          description: This is your own internal account ID. We will index it based upon
             your business ID.
           type: string
         name:
@@ -762,12 +761,30 @@ components:
       type: object
       properties:
         accounts:
-          type: array
-          items:
-            $ref: "#/components/schemas/AccountResponse"
+          additionalProperties: false
+          type: object
+          properties:
+            Items:
+              $ref: "#/components/schemas/AccountResponse"
+            Count:
+              type: number
+            ScannedCount:
+              type: number
+            LastEvaluatedKey:
+              type: object
+              additionalProperties:
+                type: string
+          required:
+            - Count
+            - Items
+            - LastEvaluatedKey
+            - ScannedCount
+        total:
+          type: number
       additionalProperties: false
       required:
         - accounts
+        - total
     AccountStatsResponse:
       type: object
       properties:
@@ -839,11 +856,29 @@ components:
       type: object
       properties:
         transactions:
-          type: array
-          items:
-            $ref: "#/components/schemas/TransactionResponse"
+          additionalProperties: false
+          type: object
+          properties:
+            Items:
+              $ref: "#/components/schemas/TransactionResponse"
+            Count:
+              type: number
+            ScannedCount:
+              type: number
+            LastEvaluatedKey:
+              type: object
+              additionalProperties:
+                type: string
+          required:
+            - Count
+            - Items
+            - LastEvaluatedKey
+            - ScannedCount
+        total:
+          type: number
       additionalProperties: false
       required:
+        - total
         - transactions
     PatchAccountRequest:
       type: object
@@ -955,8 +990,7 @@ components:
       type: object
       properties:
         name:
-          description:
-            "I am curious to see if this works with markdown like this link:
+          description: "I am curious to see if this works with markdown like this link:
             [to google](https://www.google.com)"
           type: string
       additionalProperties: false
