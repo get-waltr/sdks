@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: 0.0.10
+  version: 0.0.11
   title: ""
   description: ""
 paths:
@@ -696,7 +696,8 @@ components:
       type: object
       properties:
         accountId:
-          description: This is your own internal account ID. We will index it based upon
+          description:
+            This is your own internal account ID. We will index it based upon
             your business ID.
           type: string
         name:
@@ -773,7 +774,9 @@ components:
           type: object
           properties:
             Items:
-              $ref: "#/components/schemas/AccountResponse"
+              type: array
+              items:
+                $ref: "#/components/schemas/AccountResponse"
             Count:
               type: number
             ScannedCount:
@@ -868,7 +871,9 @@ components:
           type: object
           properties:
             Items:
-              $ref: "#/components/schemas/TransactionResponse"
+              type: array
+              items:
+                $ref: "#/components/schemas/TransactionResponse"
             Count:
               type: number
             ScannedCount:
@@ -998,7 +1003,8 @@ components:
       type: object
       properties:
         name:
-          description: "I am curious to see if this works with markdown like this link:
+          description:
+            "I am curious to see if this works with markdown like this link:
             [to google](https://www.google.com)"
           type: string
       additionalProperties: false
