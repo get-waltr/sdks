@@ -14,7 +14,9 @@ docs/Model/AccountStatsResponseDailyInner.md
 docs/Model/AccountUsageBillingAdjustmentsResponse.md
 docs/Model/AccountUsageBillingAdjustmentsResponseAdjustmentsInner.md
 docs/Model/AllAccountsResponse.md
+docs/Model/AllAccountsResponseAccounts.md
 docs/Model/AllTransactionsResponse.md
+docs/Model/AllTransactionsResponseTransactions.md
 docs/Model/BillingType.md
 docs/Model/BusinessResponse.md
 docs/Model/BusinessSettingsResponse.md
@@ -44,7 +46,9 @@ lib/Model/AccountStatsResponseDailyInner.php
 lib/Model/AccountUsageBillingAdjustmentsResponse.php
 lib/Model/AccountUsageBillingAdjustmentsResponseAdjustmentsInner.php
 lib/Model/AllAccountsResponse.php
+lib/Model/AllAccountsResponseAccounts.php
 lib/Model/AllTransactionsResponse.php
+lib/Model/AllTransactionsResponseTransactions.php
 lib/Model/BillingType.php
 lib/Model/BusinessResponse.php
 lib/Model/BusinessSettingsResponse.php
@@ -72,8 +76,10 @@ test/Model/AccountStatsResponseDailyInnerTest.php
 test/Model/AccountStatsResponseTest.php
 test/Model/AccountUsageBillingAdjustmentsResponseAdjustmentsInnerTest.php
 test/Model/AccountUsageBillingAdjustmentsResponseTest.php
+test/Model/AllAccountsResponseAccountsTest.php
 test/Model/AllAccountsResponseTest.php
 test/Model/AllTransactionsResponseTest.php
+test/Model/AllTransactionsResponseTransactionsTest.php
 test/Model/BillingTypeTest.php
 test/Model/BusinessResponseTest.php
 test/Model/BusinessSettingsResponseTest.php

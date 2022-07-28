@@ -16,7 +16,9 @@ lib/model/account_stats_response_daily_inner.ex
 lib/model/account_usage_billing_adjustments_response.ex
 lib/model/account_usage_billing_adjustments_response_adjustments_inner.ex
 lib/model/all_accounts_response.ex
+lib/model/all_accounts_response_accounts.ex
 lib/model/all_transactions_response.ex
+lib/model/all_transactions_response_transactions.ex
 lib/model/billing_type.ex
 lib/model/business_response.ex
 lib/model/business_settings_response.ex

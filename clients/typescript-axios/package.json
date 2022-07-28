@@ -1,6 +1,6 @@
 {
   "name": "@gilfold/sdk",
-  "version": "0.0.42",
+  "version": "0.0.9",
   "description": "OpenAPI bar client for @gilfold/sdk",
   "author": "OpenAPI-Generator Contributors",
   "repository": {

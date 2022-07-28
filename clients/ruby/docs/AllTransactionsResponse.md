@@ -4,7 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **transactions** | [**Array&lt;TransactionResponse&gt;**](TransactionResponse.md) |  |  |
+| **transactions** | [**AllTransactionsResponseTransactions**](AllTransactionsResponseTransactions.md) |  |  |
+| **total** | **Float** |  |  |
 
 ## Example
 
@@ -12,7 +13,8 @@
 require 'openapi_client'
 
 instance = OpenapiClient::AllTransactionsResponse.new(
-  transactions: null
+  transactions: null,
+  total: null
 )
 ```
 

@@ -14,7 +14,9 @@ docs/AccountUsageBillingAdjustmentsResponse.md
 docs/AccountUsageBillingAdjustmentsResponseAdjustmentsInner.md
 docs/AccountsApi.md
 docs/AllAccountsResponse.md
+docs/AllAccountsResponseAccounts.md
 docs/AllTransactionsResponse.md
+docs/AllTransactionsResponseTransactions.md
 docs/BillingType.md
 docs/BusinessResponse.md
 docs/BusinessSettingsResponse.md
@@ -48,7 +50,9 @@ lib/openapi_client/models/account_stats_response_daily_inner.rb
 lib/openapi_client/models/account_usage_billing_adjustments_response.rb
 lib/openapi_client/models/account_usage_billing_adjustments_response_adjustments_inner.rb
 lib/openapi_client/models/all_accounts_response.rb
+lib/openapi_client/models/all_accounts_response_accounts.rb
 lib/openapi_client/models/all_transactions_response.rb
+lib/openapi_client/models/all_transactions_response_transactions.rb
 lib/openapi_client/models/billing_type.rb
 lib/openapi_client/models/business_response.rb
 lib/openapi_client/models/business_settings_response.rb
@@ -77,8 +81,10 @@ spec/models/account_stats_response_daily_inner_spec.rb
 spec/models/account_stats_response_spec.rb
 spec/models/account_usage_billing_adjustments_response_adjustments_inner_spec.rb
 spec/models/account_usage_billing_adjustments_response_spec.rb
+spec/models/all_accounts_response_accounts_spec.rb
 spec/models/all_accounts_response_spec.rb
 spec/models/all_transactions_response_spec.rb
+spec/models/all_transactions_response_transactions_spec.rb
 spec/models/billing_type_spec.rb
 spec/models/business_response_spec.rb
 spec/models/business_settings_response_spec.rb

@@ -4,7 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **accounts** | [**Array&lt;AccountResponse&gt;**](AccountResponse.md) |  |  |
+| **accounts** | [**AllAccountsResponseAccounts**](AllAccountsResponseAccounts.md) |  |  |
+| **total** | **Float** |  |  |
 
 ## Example
 
@@ -12,7 +13,8 @@
 require 'openapi_client'
 
 instance = OpenapiClient::AllAccountsResponse.new(
-  accounts: null
+  accounts: null,
+  total: null
 )
 ```
 

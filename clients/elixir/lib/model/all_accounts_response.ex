@@ -9,11 +9,13 @@ defmodule .Model.AllAccountsResponse do
 
   @derive [Poison.Encoder]
   defstruct [
-    :accounts
+    :accounts,
+    :total
   ]
 
   @type t :: %__MODULE__{
-    :accounts => [.Model.AccountResponse.t]
+    :accounts => .Model.AllAccountsResponseAccounts.t,
+    :total => float()
   }
 end
 
@@ -21,7 +23,7 @@ defimpl Poison.Decoder, for: .Model.AllAccountsResponse do
   import .Deserializer
   def decode(value, options) do
     value
-    |> deserialize(:accounts, :list, .Model.AccountResponse, options)
+    |> deserialize(:accounts, :struct, .Model.AllAccountsResponseAccounts, options)
   end
 end
 

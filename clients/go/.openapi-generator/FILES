@@ -16,7 +16,9 @@ docs/AccountUsageBillingAdjustmentsResponse.md
 docs/AccountUsageBillingAdjustmentsResponseAdjustmentsInner.md
 docs/AccountsApi.md
 docs/AllAccountsResponse.md
+docs/AllAccountsResponseAccounts.md
 docs/AllTransactionsResponse.md
+docs/AllTransactionsResponseTransactions.md
 docs/BillingType.md
 docs/BusinessResponse.md
 docs/BusinessSettingsResponse.md
@@ -44,7 +46,9 @@ model_account_stats_response_daily_inner.go
 model_account_usage_billing_adjustments_response.go
 model_account_usage_billing_adjustments_response_adjustments_inner.go
 model_all_accounts_response.go
+model_all_accounts_response_accounts.go
 model_all_transactions_response.go
+model_all_transactions_response_transactions.go
 model_billing_type.go
 model_business_response.go
 model_business_settings_response.go

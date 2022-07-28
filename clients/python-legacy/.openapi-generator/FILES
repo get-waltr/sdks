@@ -10,7 +10,9 @@ docs/AccountUsageBillingAdjustmentsResponse.md
 docs/AccountUsageBillingAdjustmentsResponseAdjustmentsInner.md
 docs/AccountsApi.md
 docs/AllAccountsResponse.md
+docs/AllAccountsResponseAccounts.md
 docs/AllTransactionsResponse.md
+docs/AllTransactionsResponseTransactions.md
 docs/BillingType.md
 docs/BusinessResponse.md
 docs/BusinessSettingsResponse.md
@@ -46,7 +48,9 @@ openapi_client/models/account_stats_response_daily_inner.py
 openapi_client/models/account_usage_billing_adjustments_response.py
 openapi_client/models/account_usage_billing_adjustments_response_adjustments_inner.py
 openapi_client/models/all_accounts_response.py
+openapi_client/models/all_accounts_response_accounts.py
 openapi_client/models/all_transactions_response.py
+openapi_client/models/all_transactions_response_transactions.py
 openapi_client/models/billing_type.py
 openapi_client/models/business_response.py
 openapi_client/models/business_settings_response.py
@@ -75,7 +79,9 @@ test/test_account_usage_billing_adjustments_response.py
 test/test_account_usage_billing_adjustments_response_adjustments_inner.py
 test/test_accounts_api.py
 test/test_all_accounts_response.py
+test/test_all_accounts_response_accounts.py
 test/test_all_transactions_response.py
+test/test_all_transactions_response_transactions.py
 test/test_billing_type.py
 test/test_business_response.py
 test/test_business_settings_response.py

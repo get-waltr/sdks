@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   description: ""
   title: ""
-  version: 0.0.42
+  version: 0.0.9
 servers:
 - url: http://localhost:3333
 security:
@@ -771,24 +771,26 @@ components:
     AllAccountsResponse:
       additionalProperties: false
       example:
+        total: 2.3021358869347655
         accounts:
-        - accountId: accountId
-          createdAt: 0.8008281904610115
-          usageBillingRate: 1.4658129805029452
-          modifiedAt: 6.027456183070403
-          name: name
-        - accountId: accountId
-          createdAt: 0.8008281904610115
-          usageBillingRate: 1.4658129805029452
-          modifiedAt: 6.027456183070403
-          name: name
+          Items:
+            accountId: accountId
+            createdAt: 0.8008281904610115
+            usageBillingRate: 1.4658129805029452
+            modifiedAt: 6.027456183070403
+            name: name
+          Count: 5.962133916683182
+          ScannedCount: 5.637376656633329
+          LastEvaluatedKey:
+            key: LastEvaluatedKey
       properties:
         accounts:
-          items:
-            $ref: '#/components/schemas/AccountResponse'
-          type: array
+          $ref: '#/components/schemas/AllAccountsResponse_accounts'
+        total:
+          type: number
       required:
       - accounts
+      - total
       type: object
     AccountStatsResponse:
       additionalProperties: false
@@ -864,31 +866,29 @@ components:
     AllTransactionsResponse:
       additionalProperties: false
       example:
+        total: 2.3021358869347655
         transactions:
-        - accountId: accountId
-          note: note
-          createdAt: 6.027456183070403
-          amount: 0.8008281904610115
-          paymentProvider: stripe
-          paymentId: paymentId
-          modifiedAt: 1.4658129805029452
-          businessId: businessId
-          transactionId: transactionId
-        - accountId: accountId
-          note: note
-          createdAt: 6.027456183070403
-          amount: 0.8008281904610115
-          paymentProvider: stripe
-          paymentId: paymentId
-          modifiedAt: 1.4658129805029452
-          businessId: businessId
-          transactionId: transactionId
+          Items:
+            accountId: accountId
+            note: note
+            createdAt: 6.027456183070403
+            amount: 0.8008281904610115
+            paymentProvider: stripe
+            paymentId: paymentId
+            modifiedAt: 1.4658129805029452
+            businessId: businessId
+            transactionId: transactionId
+          Count: 5.962133916683182
+          ScannedCount: 5.637376656633329
+          LastEvaluatedKey:
+            key: LastEvaluatedKey
       properties:
         transactions:
-          items:
-            $ref: '#/components/schemas/TransactionResponse'
-          type: array
+          $ref: '#/components/schemas/AllTransactionsResponse_transactions'
+        total:
+          type: number
       required:
+      - total
       - transactions
       type: object
     PatchAccountRequest:
@@ -1103,6 +1103,36 @@ components:
         paymentId:
           type: string
       type: object
+    AllAccountsResponse_accounts:
+      additionalProperties: false
+      example:
+        Items:
+          accountId: accountId
+          createdAt: 0.8008281904610115
+          usageBillingRate: 1.4658129805029452
+          modifiedAt: 6.027456183070403
+          name: name
+        Count: 5.962133916683182
+        ScannedCount: 5.637376656633329
+        LastEvaluatedKey:
+          key: LastEvaluatedKey
+      properties:
+        Items:
+          $ref: '#/components/schemas/AccountResponse'
+        Count:
+          type: number
+        ScannedCount:
+          type: number
+        LastEvaluatedKey:
+          additionalProperties:
+            type: string
+          type: object
+      required:
+      - Count
+      - Items
+      - LastEvaluatedKey
+      - ScannedCount
+      type: object
     AccountStatsResponse_daily_inner:
       additionalProperties: false
       example:
@@ -1116,6 +1146,40 @@ components:
       required:
       - amount
       - date
+      type: object
+    AllTransactionsResponse_transactions:
+      additionalProperties: false
+      example:
+        Items:
+          accountId: accountId
+          note: note
+          createdAt: 6.027456183070403
+          amount: 0.8008281904610115
+          paymentProvider: stripe
+          paymentId: paymentId
+          modifiedAt: 1.4658129805029452
+          businessId: businessId
+          transactionId: transactionId
+        Count: 5.962133916683182
+        ScannedCount: 5.637376656633329
+        LastEvaluatedKey:
+          key: LastEvaluatedKey
+      properties:
+        Items:
+          $ref: '#/components/schemas/TransactionResponse'
+        Count:
+          type: number
+        ScannedCount:
+          type: number
+        LastEvaluatedKey:
+          additionalProperties:
+            type: string
+          type: object
+      required:
+      - Count
+      - Items
+      - LastEvaluatedKey
+      - ScannedCount
       type: object
     AccountUsageBillingAdjustmentsResponse_adjustments_inner:
       additionalProperties: false
