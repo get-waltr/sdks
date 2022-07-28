@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   description: ""
   title: ""
-  version: 0.0.9
+  version: 0.0.10
 servers:
 - url: http://localhost:3333
 security:
@@ -714,22 +714,33 @@ components:
       example:
         accountId: accountId
         createdAt: 0.8008281904610115
-        usageBillingRate: 1.4658129805029452
+        usageBillingRate: 5.962133916683182
+        remainingHoursOnBalance: 5.637376656633329
+        balance: 1.4658129805029452
+        accountName: accountName
         modifiedAt: 6.027456183070403
-        name: name
+        businessId: businessId
       properties:
+        businessId:
+          type: string
         accountId:
           type: string
-        name:
+        accountName:
           type: string
         createdAt:
           type: number
         modifiedAt:
           type: number
+        balance:
+          type: number
         usageBillingRate:
+          type: number
+        remainingHoursOnBalance:
           type: number
       required:
       - accountId
+      - balance
+      - businessId
       - createdAt
       - modifiedAt
       - usageBillingRate
@@ -771,16 +782,19 @@ components:
     AllAccountsResponse:
       additionalProperties: false
       example:
-        total: 2.3021358869347655
+        total: 9.301444243932576
         accounts:
           Items:
             accountId: accountId
             createdAt: 0.8008281904610115
-            usageBillingRate: 1.4658129805029452
+            usageBillingRate: 5.962133916683182
+            remainingHoursOnBalance: 5.637376656633329
+            balance: 1.4658129805029452
+            accountName: accountName
             modifiedAt: 6.027456183070403
-            name: name
-          Count: 5.962133916683182
-          ScannedCount: 5.637376656633329
+            businessId: businessId
+          Count: 2.3021358869347655
+          ScannedCount: 7.061401241503109
           LastEvaluatedKey:
             key: LastEvaluatedKey
       properties:
@@ -1109,11 +1123,14 @@ components:
         Items:
           accountId: accountId
           createdAt: 0.8008281904610115
-          usageBillingRate: 1.4658129805029452
+          usageBillingRate: 5.962133916683182
+          remainingHoursOnBalance: 5.637376656633329
+          balance: 1.4658129805029452
+          accountName: accountName
           modifiedAt: 6.027456183070403
-          name: name
-        Count: 5.962133916683182
-        ScannedCount: 5.637376656633329
+          businessId: businessId
+        Count: 2.3021358869347655
+        ScannedCount: 7.061401241503109
         LastEvaluatedKey:
           key: LastEvaluatedKey
       properties:

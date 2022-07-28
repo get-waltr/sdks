@@ -9,19 +9,25 @@ defmodule .Model.AccountResponse do
 
   @derive [Poison.Encoder]
   defstruct [
+    :businessId,
     :accountId,
-    :name,
+    :accountName,
     :createdAt,
     :modifiedAt,
-    :usageBillingRate
+    :balance,
+    :usageBillingRate,
+    :remainingHoursOnBalance
   ]
 
   @type t :: %__MODULE__{
+    :businessId => String.t,
     :accountId => String.t,
-    :name => String.t | nil,
+    :accountName => String.t | nil,
     :createdAt => float(),
     :modifiedAt => float(),
-    :usageBillingRate => float()
+    :balance => float(),
+    :usageBillingRate => float(),
+    :remainingHoursOnBalance => float() | nil
   }
 end
 
