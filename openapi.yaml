@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: 0.0.11
+  version: 0.0.0
   title: ""
   description: ""
 paths:
@@ -12,39 +12,33 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/AccountResponse"
         "400":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "409":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Accounts
       requestBody:
         required: true
         content:
-          application/json:
+          application/json; charset=utf8:
             schema:
               $ref: "#/components/schemas/PostAccountRequest"
     get:
@@ -54,27 +48,15 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/AllAccountsResponse"
-        "400":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Accounts
   /accounts/:accountId:
@@ -85,33 +67,21 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/EmptyResponse"
-        "400":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "404":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Accounts
     get:
@@ -121,33 +91,21 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/AccountResponse"
-        "400":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "404":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Accounts
     patch:
@@ -157,60 +115,29 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/AccountResponse"
         "400":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Accounts
       requestBody:
         required: true
         content:
-          application/json:
+          application/json; charset=utf8:
             schema:
               $ref: "#/components/schemas/PatchAccountRequest"
-  /accounts/stats:
-    get:
-      summary: Get stats for all accounts
-      description: Get stats for all accounts
-      responses:
-        "200":
-          description: Response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/AccountStatsResponse"
-        "400":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
-      tags:
-        - Accounts
   /accounts/:accountId/transactions:
     get:
       summary: Get Transactions for an Account
@@ -219,33 +146,21 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/AllTransactionsResponse"
-        "400":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "404":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Accounts
   /accounts/:accountId/usage:
@@ -256,33 +171,21 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/AccountUsageBillingAdjustmentsResponse"
-        "400":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "404":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Usage
     post:
@@ -292,84 +195,60 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/EmptyResponse"
         "400":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "404":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Usage
       requestBody:
         required: true
         content:
-          application/json:
+          application/json; charset=utf8:
             schema:
               $ref: "#/components/schemas/PostAccountUsageBillingRateAdjustmentRequest"
   /businesses/:businessId:
     get:
       summary: Get Business Details
       description: >
-
+        
         Use this to get the name and other business details. Here is a link: [to google](https://google.com). Let's see if it works.
       responses:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/BusinessResponse"
-        "400":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "403":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "404":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Businesses
     patch:
@@ -379,48 +258,36 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/BusinessResponse"
         "400":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "403":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "404":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Businesses
       requestBody:
         required: true
         content:
-          application/json:
+          application/json; charset=utf8:
             schema:
               $ref: "#/components/schemas/PatchBusinessRequest"
-  /business/:businessId/settings:
+  /businesses/:businessId/settings:
     get:
       summary: Get Settings for a business
       description: Get Settings for a business
@@ -428,39 +295,21 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/BusinessSettingsResponse"
-        "400":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "403":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "404":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Businesses
   /transactions:
@@ -471,33 +320,27 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/TransactionResponse"
         "400":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Transactions
       requestBody:
         required: true
         content:
-          application/json:
+          application/json; charset=utf8:
             schema:
               $ref: "#/components/schemas/PostTransactionRequest"
     get:
@@ -507,27 +350,15 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/AllTransactionsResponse"
-        "400":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Transactions
   /transactions/:transactionId:
@@ -538,39 +369,21 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/EmptyResponse"
-        "400":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "403":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "404":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Transactions
     get:
@@ -580,39 +393,21 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/TransactionResponse"
-        "400":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "403":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "404":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Transactions
     patch:
@@ -622,72 +417,35 @@ paths:
         "200":
           description: Response
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
                 $ref: "#/components/schemas/TransactionResponse"
         "400":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "401":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "403":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
         "404":
           description: Error
           content:
-            application/json:
+            application/json; charset=utf8:
               schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
+                $ref: "#/components/schemas/EmptyResponse"
       tags:
         - Transactions
       requestBody:
         required: true
         content:
-          application/json:
+          application/json; charset=utf8:
             schema:
               $ref: "#/components/schemas/PatchTransactionRequest"
-  /transactions/stats:
-    get:
-      summary: Get stats for all Transactions
-      description: Get stats for all Transactions
-      responses:
-        "200":
-          description: Response
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/TransactionStatsResponse"
-        "400":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
-        "500":
-          description: Error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ErrorResponse"
-      tags:
-        - Transactions
 servers:
   - url: http://localhost:3333
 components:
@@ -696,11 +454,11 @@ components:
       type: object
       properties:
         accountId:
-          description:
-            This is your own internal account ID. We will index it based upon
+          description: This is your own internal account ID. We will index it based upon
             your business ID.
+          minLength: 1
           type: string
-        name:
+        accountName:
           type: string
       additionalProperties: false
       required:
@@ -732,37 +490,6 @@ components:
         - createdAt
         - modifiedAt
         - usageBillingRate
-    ErrorResponse:
-      type: object
-      properties:
-        transactionId:
-          type: string
-        accountId:
-          type: string
-        businessId:
-          type: string
-        amount:
-          type: number
-        note:
-          type: string
-        paymentProvider:
-          type: string
-          enum:
-            - stripe
-        paymentId:
-          type: string
-        createdAt:
-          type: number
-        modifiedAt:
-          type: number
-      additionalProperties: false
-      required:
-        - accountId
-        - amount
-        - businessId
-        - createdAt
-        - modifiedAt
-        - transactionId
     EmptyResponse:
       type: object
       additionalProperties: false
@@ -795,42 +522,6 @@ components:
       additionalProperties: false
       required:
         - accounts
-        - total
-    AccountStatsResponse:
-      type: object
-      properties:
-        total:
-          type: number
-        daily:
-          type: array
-          items:
-            type: object
-            properties:
-              date:
-                type: string
-              amount:
-                type: number
-            additionalProperties: false
-            required:
-              - amount
-              - date
-        monthly:
-          type: array
-          items:
-            type: object
-            properties:
-              date:
-                type: string
-              amount:
-                type: number
-            additionalProperties: false
-            required:
-              - amount
-              - date
-      additionalProperties: false
-      required:
-        - daily
-        - monthly
         - total
     TransactionResponse:
       type: object
@@ -931,6 +622,7 @@ components:
       type: object
       properties:
         billingCost:
+          minimum: 0
           type: number
       additionalProperties: false
       required:
@@ -940,12 +632,12 @@ components:
       properties:
         businessId:
           type: string
-        name:
+        businessName:
           type: string
       additionalProperties: false
       required:
         - businessId
-        - name
+        - businessName
     BusinessSettingsResponse:
       type: object
       properties:
@@ -1002,10 +694,10 @@ components:
     PatchBusinessRequest:
       type: object
       properties:
-        name:
-          description:
-            "I am curious to see if this works with markdown like this link:
+        businessName:
+          description: "I am curious to see if this works with markdown like this link:
             [to google](https://www.google.com)"
+          minLength: 1
           type: string
       additionalProperties: false
     PaymentProvider:
@@ -1017,10 +709,12 @@ components:
       type: object
       properties:
         accountId:
+          minLength: 1
           type: string
         amount:
           type: number
         note:
+          minLength: 3
           type: string
         paymentProvider:
           $ref: "#/components/schemas/PaymentProvider"
@@ -1030,64 +724,11 @@ components:
       required:
         - accountId
         - amount
-    TransactionStatsResponse:
-      type: object
-      properties:
-        total:
-          type: number
-        daily:
-          type: array
-          items:
-            type: object
-            properties:
-              date:
-                type: string
-              incomingAmount:
-                type: number
-              outgoingAmount:
-                type: number
-              incomingCount:
-                type: number
-              outgoingCount:
-                type: number
-            additionalProperties: false
-            required:
-              - date
-              - incomingAmount
-              - incomingCount
-              - outgoingAmount
-              - outgoingCount
-        monthly:
-          type: array
-          items:
-            type: object
-            properties:
-              date:
-                type: string
-              incomingAmount:
-                type: number
-              outgoingAmount:
-                type: number
-              incomingCount:
-                type: number
-              outgoingCount:
-                type: number
-            additionalProperties: false
-            required:
-              - date
-              - incomingAmount
-              - incomingCount
-              - outgoingAmount
-              - outgoingCount
-      additionalProperties: false
-      required:
-        - daily
-        - monthly
-        - total
     PatchTransactionRequest:
       type: object
       properties:
         accountId:
+          minLength: 1
           type: string
         amount:
           type: number
