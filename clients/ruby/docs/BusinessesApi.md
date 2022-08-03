@@ -4,77 +4,9 @@ All URIs are relative to *http://localhost:3333*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**business_business_id_settings_get**](BusinessesApi.md#business_business_id_settings_get) | **GET** /business/:businessId/settings | Get Settings for a business |
 | [**businesses_business_id_get**](BusinessesApi.md#businesses_business_id_get) | **GET** /businesses/:businessId | Get Business Details |
 | [**businesses_business_id_patch**](BusinessesApi.md#businesses_business_id_patch) | **PATCH** /businesses/:businessId | Update Business Details |
-
-
-## business_business_id_settings_get
-
-> <BusinessSettingsResponse> business_business_id_settings_get
-
-Get Settings for a business
-
-Get Settings for a business
-
-### Examples
-
-```ruby
-require 'time'
-require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: ApiKeyAuth
-  config.api_key['ApiKeyAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['ApiKeyAuth'] = 'Bearer'
-end
-
-api_instance = OpenapiClient::BusinessesApi.new
-
-begin
-  # Get Settings for a business
-  result = api_instance.business_business_id_settings_get
-  p result
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling BusinessesApi->business_business_id_settings_get: #{e}"
-end
-```
-
-#### Using the business_business_id_settings_get_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<BusinessSettingsResponse>, Integer, Hash)> business_business_id_settings_get_with_http_info
-
-```ruby
-begin
-  # Get Settings for a business
-  data, status_code, headers = api_instance.business_business_id_settings_get_with_http_info
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <BusinessSettingsResponse>
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling BusinessesApi->business_business_id_settings_get_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**BusinessSettingsResponse**](BusinessSettingsResponse.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
+| [**businesses_business_id_settings_get**](BusinessesApi.md#businesses_business_id_settings_get) | **GET** /businesses/:businessId/settings | Get Settings for a business |
 
 
 ## businesses_business_id_get
@@ -142,7 +74,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 
 ## businesses_business_id_patch
@@ -212,6 +144,74 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: application/json; charset=utf8
+- **Accept**: application/json; charset=utf8
+
+
+## businesses_business_id_settings_get
+
+> <BusinessSettingsResponse> businesses_business_id_settings_get
+
+Get Settings for a business
+
+Get Settings for a business
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+# setup authorization
+OpenapiClient.configure do |config|
+  # Configure API key authorization: ApiKeyAuth
+  config.api_key['ApiKeyAuth'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+end
+
+api_instance = OpenapiClient::BusinessesApi.new
+
+begin
+  # Get Settings for a business
+  result = api_instance.businesses_business_id_settings_get
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling BusinessesApi->businesses_business_id_settings_get: #{e}"
+end
+```
+
+#### Using the businesses_business_id_settings_get_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<BusinessSettingsResponse>, Integer, Hash)> businesses_business_id_settings_get_with_http_info
+
+```ruby
+begin
+  # Get Settings for a business
+  data, status_code, headers = api_instance.businesses_business_id_settings_get_with_http_info
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <BusinessSettingsResponse>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling BusinessesApi->businesses_business_id_settings_get_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BusinessSettingsResponse**](BusinessSettingsResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json; charset=utf8
 

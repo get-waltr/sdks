@@ -4,8 +4,6 @@
 .travis.yml
 README.md
 docs/AccountResponse.md
-docs/AccountStatsResponse.md
-docs/AccountStatsResponseDailyInner.md
 docs/AccountUsageBillingAdjustmentsResponse.md
 docs/AccountUsageBillingAdjustmentsResponseAdjustmentsInner.md
 docs/AccountsApi.md
@@ -17,7 +15,6 @@ docs/BillingType.md
 docs/BusinessResponse.md
 docs/BusinessSettingsResponse.md
 docs/BusinessesApi.md
-docs/ErrorResponse.md
 docs/PatchAccountRequest.md
 docs/PatchBusinessRequest.md
 docs/PatchBusinessSettingsRequest.md
@@ -27,8 +24,6 @@ docs/PostAccountRequest.md
 docs/PostAccountUsageBillingRateAdjustmentRequest.md
 docs/PostTransactionRequest.md
 docs/TransactionResponse.md
-docs/TransactionStatsResponse.md
-docs/TransactionStatsResponseDailyInner.md
 docs/TransactionsApi.md
 docs/UsageApi.md
 git_push.sh
@@ -43,8 +38,6 @@ openapi_client/configuration.py
 openapi_client/exceptions.py
 openapi_client/models/__init__.py
 openapi_client/models/account_response.py
-openapi_client/models/account_stats_response.py
-openapi_client/models/account_stats_response_daily_inner.py
 openapi_client/models/account_usage_billing_adjustments_response.py
 openapi_client/models/account_usage_billing_adjustments_response_adjustments_inner.py
 openapi_client/models/all_accounts_response.py
@@ -54,7 +47,6 @@ openapi_client/models/all_transactions_response_transactions.py
 openapi_client/models/billing_type.py
 openapi_client/models/business_response.py
 openapi_client/models/business_settings_response.py
-openapi_client/models/error_response.py
 openapi_client/models/patch_account_request.py
 openapi_client/models/patch_business_request.py
 openapi_client/models/patch_business_settings_request.py
@@ -64,8 +56,6 @@ openapi_client/models/post_account_request.py
 openapi_client/models/post_account_usage_billing_rate_adjustment_request.py
 openapi_client/models/post_transaction_request.py
 openapi_client/models/transaction_response.py
-openapi_client/models/transaction_stats_response.py
-openapi_client/models/transaction_stats_response_daily_inner.py
 openapi_client/rest.py
 requirements.txt
 setup.cfg
@@ -73,8 +63,6 @@ setup.py
 test-requirements.txt
 test/__init__.py
 test/test_account_response.py
-test/test_account_stats_response.py
-test/test_account_stats_response_daily_inner.py
 test/test_account_usage_billing_adjustments_response.py
 test/test_account_usage_billing_adjustments_response_adjustments_inner.py
 test/test_accounts_api.py
@@ -86,7 +74,6 @@ test/test_billing_type.py
 test/test_business_response.py
 test/test_business_settings_response.py
 test/test_businesses_api.py
-test/test_error_response.py
 test/test_patch_account_request.py
 test/test_patch_business_request.py
 test/test_patch_business_settings_request.py
@@ -96,8 +83,6 @@ test/test_post_account_request.py
 test/test_post_account_usage_billing_rate_adjustment_request.py
 test/test_post_transaction_request.py
 test/test_transaction_response.py
-test/test_transaction_stats_response.py
-test/test_transaction_stats_response_daily_inner.py
 test/test_transactions_api.py
 test/test_usage_api.py
 tox.ini

@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**TransactionsGet**](TransactionsApi.md#TransactionsGet) | **Get** /transactions | Get all Transactions for a Business
 [**TransactionsPost**](TransactionsApi.md#TransactionsPost) | **Post** /transactions | Creates a Transaction for an Business
-[**TransactionsStatsGet**](TransactionsApi.md#TransactionsStatsGet) | **Get** /transactions/stats | Get stats for all Transactions
 [**TransactionsTransactionIdDelete**](TransactionsApi.md#TransactionsTransactionIdDelete) | **Delete** /transactions/:transactionId | Delete Transaction for an Business
 [**TransactionsTransactionIdGet**](TransactionsApi.md#TransactionsTransactionIdGet) | **Get** /transactions/:transactionId | Get a Transaction for a Business
 [**TransactionsTransactionIdPatch**](TransactionsApi.md#TransactionsTransactionIdPatch) | **Patch** /transactions/:transactionId | Update a Transaction for a Business
@@ -67,7 +66,7 @@ Other parameters are passed through a pointer to a apiTransactionsGetRequest str
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -132,69 +131,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## TransactionsStatsGet
-
-> TransactionStatsResponse TransactionsStatsGet(ctx).Execute()
-
-Get stats for all Transactions
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.TransactionsApi.TransactionsStatsGet(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `TransactionsApi.TransactionsStatsGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `TransactionsStatsGet`: TransactionStatsResponse
-    fmt.Fprintf(os.Stdout, "Response from `TransactionsApi.TransactionsStatsGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-This endpoint does not need any parameter.
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiTransactionsStatsGetRequest struct via the builder pattern
-
-
-### Return type
-
-[**TransactionStatsResponse**](TransactionStatsResponse.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
+- **Content-Type**: application/json; charset=utf8
+- **Accept**: application/json; charset=utf8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -255,7 +193,7 @@ Other parameters are passed through a pointer to a apiTransactionsTransactionIdD
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -316,7 +254,7 @@ Other parameters are passed through a pointer to a apiTransactionsTransactionIdG
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -381,8 +319,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: application/json; charset=utf8
+- **Accept**: application/json; charset=utf8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

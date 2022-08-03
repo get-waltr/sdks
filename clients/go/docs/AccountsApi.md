@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**AccountsAccountIdTransactionsGet**](AccountsApi.md#AccountsAccountIdTransactionsGet) | **Get** /accounts/:accountId/transactions | Get Transactions for an Account
 [**AccountsGet**](AccountsApi.md#AccountsGet) | **Get** /accounts | Get all Accounts for a Business
 [**AccountsPost**](AccountsApi.md#AccountsPost) | **Post** /accounts | Create an Account for a Business
-[**AccountsStatsGet**](AccountsApi.md#AccountsStatsGet) | **Get** /accounts/stats | Get stats for all accounts
 
 
 
@@ -68,7 +67,7 @@ Other parameters are passed through a pointer to a apiAccountsAccountIdDeleteReq
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -129,7 +128,7 @@ Other parameters are passed through a pointer to a apiAccountsAccountIdGetReques
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -194,8 +193,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: application/json; charset=utf8
+- **Accept**: application/json; charset=utf8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -256,7 +255,7 @@ Other parameters are passed through a pointer to a apiAccountsAccountIdTransacti
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -317,7 +316,7 @@ Other parameters are passed through a pointer to a apiAccountsGetRequest struct 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -382,69 +381,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## AccountsStatsGet
-
-> AccountStatsResponse AccountsStatsGet(ctx).Execute()
-
-Get stats for all accounts
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.AccountsApi.AccountsStatsGet(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `AccountsApi.AccountsStatsGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `AccountsStatsGet`: AccountStatsResponse
-    fmt.Fprintf(os.Stdout, "Response from `AccountsApi.AccountsStatsGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-This endpoint does not need any parameter.
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiAccountsStatsGetRequest struct via the builder pattern
-
-
-### Return type
-
-[**AccountStatsResponse**](AccountStatsResponse.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
+- **Content-Type**: application/json; charset=utf8
+- **Accept**: application/json; charset=utf8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

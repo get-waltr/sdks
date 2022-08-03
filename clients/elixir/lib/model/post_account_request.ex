@@ -10,12 +10,12 @@ defmodule .Model.PostAccountRequest do
   @derive [Poison.Encoder]
   defstruct [
     :accountId,
-    :name
+    :accountName
   ]
 
   @type t :: %__MODULE__{
     :accountId => String.t,
-    :name => String.t | nil
+    :accountName => String.t | nil
   }
 end
 

@@ -73,7 +73,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 
 ## accounts_account_id_usage_post
@@ -143,6 +143,6 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: application/json; charset=utf8
+- **Accept**: application/json; charset=utf8
 

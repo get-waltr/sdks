@@ -12,36 +12,6 @@ defmodule .Api.Businesses do
 
 
   @doc """
-  Get Settings for a business
-  Get Settings for a business
-
-  ## Parameters
-
-  - connection (.Connection): Connection to server
-  - opts (KeywordList): [optional] Optional parameters
-  ## Returns
-
-  {:ok, .Model.BusinessSettingsResponse.t} on success
-  {:error, Tesla.Env.t} on failure
-  """
-  @spec business_business_id_settings_get(Tesla.Env.client, keyword()) :: {:ok, .Model.ErrorResponse.t} | {:ok, .Model.BusinessSettingsResponse.t} | {:error, Tesla.Env.t}
-  def business_business_id_settings_get(connection, _opts \\ []) do
-    %{}
-    |> method(:get)
-    |> url("/business/:businessId/settings")
-    |> Enum.into([])
-    |> (&Connection.request(connection, &1)).()
-    |> evaluate_response([
-      { 200, %.Model.BusinessSettingsResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 403, %.Model.ErrorResponse{}},
-      { 404, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
-    ])
-  end
-
-  @doc """
   Get Business Details
    Use this to get the name and other business details. Here is a link: [to google](https://google.com). Let's see if it works. 
 
@@ -54,7 +24,7 @@ defmodule .Api.Businesses do
   {:ok, .Model.BusinessResponse.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec businesses_business_id_get(Tesla.Env.client, keyword()) :: {:ok, .Model.ErrorResponse.t} | {:ok, .Model.BusinessResponse.t} | {:error, Tesla.Env.t}
+  @spec businesses_business_id_get(Tesla.Env.client, keyword()) :: {:ok, Map.t} | {:ok, .Model.BusinessResponse.t} | {:error, Tesla.Env.t}
   def businesses_business_id_get(connection, _opts \\ []) do
     %{}
     |> method(:get)
@@ -63,11 +33,8 @@ defmodule .Api.Businesses do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %.Model.BusinessResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 403, %.Model.ErrorResponse{}},
-      { 404, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 401, %{}},
+      { 404, %{}}
     ])
   end
 
@@ -85,7 +52,7 @@ defmodule .Api.Businesses do
   {:ok, .Model.BusinessResponse.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec businesses_business_id_patch(Tesla.Env.client, .Model.PatchBusinessRequest.t, keyword()) :: {:ok, .Model.ErrorResponse.t} | {:ok, .Model.BusinessResponse.t} | {:error, Tesla.Env.t}
+  @spec businesses_business_id_patch(Tesla.Env.client, .Model.PatchBusinessRequest.t, keyword()) :: {:ok, Map.t} | {:ok, .Model.BusinessResponse.t} | {:error, Tesla.Env.t}
   def businesses_business_id_patch(connection, patch_business_request, _opts \\ []) do
     %{}
     |> method(:patch)
@@ -95,11 +62,36 @@ defmodule .Api.Businesses do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %.Model.BusinessResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 403, %.Model.ErrorResponse{}},
-      { 404, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 400, %{}},
+      { 401, %{}},
+      { 404, %{}}
+    ])
+  end
+
+  @doc """
+  Get Settings for a business
+  Get Settings for a business
+
+  ## Parameters
+
+  - connection (.Connection): Connection to server
+  - opts (KeywordList): [optional] Optional parameters
+  ## Returns
+
+  {:ok, .Model.BusinessSettingsResponse.t} on success
+  {:error, Tesla.Env.t} on failure
+  """
+  @spec businesses_business_id_settings_get(Tesla.Env.client, keyword()) :: {:ok, Map.t} | {:ok, .Model.BusinessSettingsResponse.t} | {:error, Tesla.Env.t}
+  def businesses_business_id_settings_get(connection, _opts \\ []) do
+    %{}
+    |> method(:get)
+    |> url("/businesses/:businessId/settings")
+    |> Enum.into([])
+    |> (&Connection.request(connection, &1)).()
+    |> evaluate_response([
+      { 200, %.Model.BusinessSettingsResponse{}},
+      { 401, %{}},
+      { 404, %{}}
     ])
   end
 end

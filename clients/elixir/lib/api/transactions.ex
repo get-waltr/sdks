@@ -24,7 +24,7 @@ defmodule .Api.Transactions do
   {:ok, .Model.AllTransactionsResponse.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec transactions_get(Tesla.Env.client, keyword()) :: {:ok, .Model.AllTransactionsResponse.t} | {:ok, .Model.ErrorResponse.t} | {:error, Tesla.Env.t}
+  @spec transactions_get(Tesla.Env.client, keyword()) :: {:ok, .Model.AllTransactionsResponse.t} | {:ok, Map.t} | {:error, Tesla.Env.t}
   def transactions_get(connection, _opts \\ []) do
     %{}
     |> method(:get)
@@ -33,9 +33,7 @@ defmodule .Api.Transactions do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %.Model.AllTransactionsResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 401, %{}}
     ])
   end
 
@@ -53,7 +51,7 @@ defmodule .Api.Transactions do
   {:ok, .Model.TransactionResponse.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec transactions_post(Tesla.Env.client, .Model.PostTransactionRequest.t, keyword()) :: {:ok, .Model.TransactionResponse.t} | {:ok, .Model.ErrorResponse.t} | {:error, Tesla.Env.t}
+  @spec transactions_post(Tesla.Env.client, .Model.PostTransactionRequest.t, keyword()) :: {:ok, .Model.TransactionResponse.t} | {:ok, Map.t} | {:error, Tesla.Env.t}
   def transactions_post(connection, post_transaction_request, _opts \\ []) do
     %{}
     |> method(:post)
@@ -63,36 +61,8 @@ defmodule .Api.Transactions do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %.Model.TransactionResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
-    ])
-  end
-
-  @doc """
-  Get stats for all Transactions
-  Get stats for all Transactions
-
-  ## Parameters
-
-  - connection (.Connection): Connection to server
-  - opts (KeywordList): [optional] Optional parameters
-  ## Returns
-
-  {:ok, .Model.TransactionStatsResponse.t} on success
-  {:error, Tesla.Env.t} on failure
-  """
-  @spec transactions_stats_get(Tesla.Env.client, keyword()) :: {:ok, .Model.TransactionStatsResponse.t} | {:ok, .Model.ErrorResponse.t} | {:error, Tesla.Env.t}
-  def transactions_stats_get(connection, _opts \\ []) do
-    %{}
-    |> method(:get)
-    |> url("/transactions/stats")
-    |> Enum.into([])
-    |> (&Connection.request(connection, &1)).()
-    |> evaluate_response([
-      { 200, %.Model.TransactionStatsResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 400, %{}},
+      { 401, %{}}
     ])
   end
 
@@ -109,7 +79,7 @@ defmodule .Api.Transactions do
   {:ok, map()} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec transactions_transaction_id_delete(Tesla.Env.client, keyword()) :: {:ok, Map.t} | {:ok, .Model.ErrorResponse.t} | {:error, Tesla.Env.t}
+  @spec transactions_transaction_id_delete(Tesla.Env.client, keyword()) :: {:ok, Map.t} | {:error, Tesla.Env.t}
   def transactions_transaction_id_delete(connection, _opts \\ []) do
     %{}
     |> method(:delete)
@@ -118,11 +88,8 @@ defmodule .Api.Transactions do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 403, %.Model.ErrorResponse{}},
-      { 404, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 401, %{}},
+      { 404, %{}}
     ])
   end
 
@@ -139,7 +106,7 @@ defmodule .Api.Transactions do
   {:ok, .Model.TransactionResponse.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec transactions_transaction_id_get(Tesla.Env.client, keyword()) :: {:ok, .Model.TransactionResponse.t} | {:ok, .Model.ErrorResponse.t} | {:error, Tesla.Env.t}
+  @spec transactions_transaction_id_get(Tesla.Env.client, keyword()) :: {:ok, .Model.TransactionResponse.t} | {:ok, Map.t} | {:error, Tesla.Env.t}
   def transactions_transaction_id_get(connection, _opts \\ []) do
     %{}
     |> method(:get)
@@ -148,11 +115,8 @@ defmodule .Api.Transactions do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %.Model.TransactionResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 403, %.Model.ErrorResponse{}},
-      { 404, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 401, %{}},
+      { 404, %{}}
     ])
   end
 
@@ -170,7 +134,7 @@ defmodule .Api.Transactions do
   {:ok, .Model.TransactionResponse.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec transactions_transaction_id_patch(Tesla.Env.client, .Model.PatchTransactionRequest.t, keyword()) :: {:ok, .Model.TransactionResponse.t} | {:ok, .Model.ErrorResponse.t} | {:error, Tesla.Env.t}
+  @spec transactions_transaction_id_patch(Tesla.Env.client, .Model.PatchTransactionRequest.t, keyword()) :: {:ok, .Model.TransactionResponse.t} | {:ok, Map.t} | {:error, Tesla.Env.t}
   def transactions_transaction_id_patch(connection, patch_transaction_request, _opts \\ []) do
     %{}
     |> method(:patch)
@@ -180,11 +144,9 @@ defmodule .Api.Transactions do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %.Model.TransactionResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 403, %.Model.ErrorResponse{}},
-      { 404, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 400, %{}},
+      { 401, %{}},
+      { 404, %{}}
     ])
   end
 end

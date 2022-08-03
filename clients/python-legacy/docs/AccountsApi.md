@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**accounts_account_id_transactions_get**](AccountsApi.md#accounts_account_id_transactions_get) | **GET** /accounts/:accountId/transactions | Get Transactions for an Account
 [**accounts_get**](AccountsApi.md#accounts_get) | **GET** /accounts | Get all Accounts for a Business
 [**accounts_post**](AccountsApi.md#accounts_post) | **POST** /accounts | Create an Account for a Business
-[**accounts_stats_get**](AccountsApi.md#accounts_stats_get) | **GET** /accounts/stats | Get stats for all accounts
 
 
 # **accounts_account_id_delete**
@@ -73,16 +72,14 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=utf8
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Response |  -  |
-**400** | Error |  -  |
 **401** | Error |  -  |
 **404** | Error |  -  |
-**500** | Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -146,16 +143,14 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=utf8
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Response |  -  |
-**400** | Error |  -  |
 **401** | Error |  -  |
 **404** | Error |  -  |
-**500** | Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -222,8 +217,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=utf8
+ - **Accept**: application/json; charset=utf8
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -231,7 +226,6 @@ Name | Type | Description  | Notes
 **200** | Response |  -  |
 **400** | Error |  -  |
 **401** | Error |  -  |
-**500** | Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -295,16 +289,14 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=utf8
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Response |  -  |
-**400** | Error |  -  |
 **401** | Error |  -  |
 **404** | Error |  -  |
-**500** | Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -368,15 +360,13 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: application/json; charset=utf8
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Response |  -  |
-**400** | Error |  -  |
 **401** | Error |  -  |
-**500** | Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -443,8 +433,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: application/json; charset=utf8
+ - **Accept**: application/json; charset=utf8
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -453,78 +443,6 @@ Name | Type | Description  | Notes
 **400** | Error |  -  |
 **401** | Error |  -  |
 **409** | Error |  -  |
-**500** | Error |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **accounts_stats_get**
-> AccountStatsResponse accounts_stats_get()
-
-Get stats for all accounts
-
-Get stats for all accounts
-
-### Example
-
-* Api Key Authentication (ApiKeyAuth):
-```python
-from __future__ import print_function
-import time
-import openapi_client
-from openapi_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:3333
-# See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
-    host = "http://localhost:3333"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: ApiKeyAuth
-configuration.api_key['ApiKeyAuth'] = 'YOUR_API_KEY'
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = openapi_client.AccountsApi(api_client)
-    
-    try:
-        # Get stats for all accounts
-        api_response = api_instance.accounts_stats_get()
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling AccountsApi->accounts_stats_get: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**AccountStatsResponse**](AccountStatsResponse.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Response |  -  |
-**400** | Error |  -  |
-**500** | Error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

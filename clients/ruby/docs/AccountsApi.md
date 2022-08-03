@@ -10,7 +10,6 @@ All URIs are relative to *http://localhost:3333*
 | [**accounts_account_id_transactions_get**](AccountsApi.md#accounts_account_id_transactions_get) | **GET** /accounts/:accountId/transactions | Get Transactions for an Account |
 | [**accounts_get**](AccountsApi.md#accounts_get) | **GET** /accounts | Get all Accounts for a Business |
 | [**accounts_post**](AccountsApi.md#accounts_post) | **POST** /accounts | Create an Account for a Business |
-| [**accounts_stats_get**](AccountsApi.md#accounts_stats_get) | **GET** /accounts/stats | Get stats for all accounts |
 
 
 ## accounts_account_id_delete
@@ -78,7 +77,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 
 ## accounts_account_id_get
@@ -146,7 +145,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 
 ## accounts_account_id_patch
@@ -216,8 +215,8 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: application/json; charset=utf8
+- **Accept**: application/json; charset=utf8
 
 
 ## accounts_account_id_transactions_get
@@ -285,7 +284,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 
 ## accounts_get
@@ -353,7 +352,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 
 ## accounts_post
@@ -423,74 +422,6 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## accounts_stats_get
-
-> <AccountStatsResponse> accounts_stats_get
-
-Get stats for all accounts
-
-Get stats for all accounts
-
-### Examples
-
-```ruby
-require 'time'
-require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: ApiKeyAuth
-  config.api_key['ApiKeyAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['ApiKeyAuth'] = 'Bearer'
-end
-
-api_instance = OpenapiClient::AccountsApi.new
-
-begin
-  # Get stats for all accounts
-  result = api_instance.accounts_stats_get
-  p result
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling AccountsApi->accounts_stats_get: #{e}"
-end
-```
-
-#### Using the accounts_stats_get_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<AccountStatsResponse>, Integer, Hash)> accounts_stats_get_with_http_info
-
-```ruby
-begin
-  # Get stats for all accounts
-  data, status_code, headers = api_instance.accounts_stats_get_with_http_info
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <AccountStatsResponse>
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling AccountsApi->accounts_stats_get_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**AccountStatsResponse**](AccountStatsResponse.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
+- **Content-Type**: application/json; charset=utf8
+- **Accept**: application/json; charset=utf8
 

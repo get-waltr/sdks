@@ -5,7 +5,7 @@
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **business_id** | **String** |  |  |
-| **name** | **String** |  |  |
+| **business_name** | **String** |  |  |
 
 ## Example
 
@@ -14,7 +14,7 @@ require 'openapi_client'
 
 instance = OpenapiClient::BusinessResponse.new(
   business_id: null,
-  name: null
+  business_name: null
 )
 ```
 

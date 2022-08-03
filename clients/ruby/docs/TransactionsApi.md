@@ -6,7 +6,6 @@ All URIs are relative to *http://localhost:3333*
 | ------ | ------------ | ----------- |
 | [**transactions_get**](TransactionsApi.md#transactions_get) | **GET** /transactions | Get all Transactions for a Business |
 | [**transactions_post**](TransactionsApi.md#transactions_post) | **POST** /transactions | Creates a Transaction for an Business |
-| [**transactions_stats_get**](TransactionsApi.md#transactions_stats_get) | **GET** /transactions/stats | Get stats for all Transactions |
 | [**transactions_transaction_id_delete**](TransactionsApi.md#transactions_transaction_id_delete) | **DELETE** /transactions/:transactionId | Delete Transaction for an Business |
 | [**transactions_transaction_id_get**](TransactionsApi.md#transactions_transaction_id_get) | **GET** /transactions/:transactionId | Get a Transaction for a Business |
 | [**transactions_transaction_id_patch**](TransactionsApi.md#transactions_transaction_id_patch) | **PATCH** /transactions/:transactionId | Update a Transaction for a Business |
@@ -77,7 +76,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 
 ## transactions_post
@@ -147,76 +146,8 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## transactions_stats_get
-
-> <TransactionStatsResponse> transactions_stats_get
-
-Get stats for all Transactions
-
-Get stats for all Transactions
-
-### Examples
-
-```ruby
-require 'time'
-require 'openapi_client'
-# setup authorization
-OpenapiClient.configure do |config|
-  # Configure API key authorization: ApiKeyAuth
-  config.api_key['ApiKeyAuth'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['ApiKeyAuth'] = 'Bearer'
-end
-
-api_instance = OpenapiClient::TransactionsApi.new
-
-begin
-  # Get stats for all Transactions
-  result = api_instance.transactions_stats_get
-  p result
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling TransactionsApi->transactions_stats_get: #{e}"
-end
-```
-
-#### Using the transactions_stats_get_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<TransactionStatsResponse>, Integer, Hash)> transactions_stats_get_with_http_info
-
-```ruby
-begin
-  # Get stats for all Transactions
-  data, status_code, headers = api_instance.transactions_stats_get_with_http_info
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <TransactionStatsResponse>
-rescue OpenapiClient::ApiError => e
-  puts "Error when calling TransactionsApi->transactions_stats_get_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**TransactionStatsResponse**](TransactionStatsResponse.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
+- **Content-Type**: application/json; charset=utf8
+- **Accept**: application/json; charset=utf8
 
 
 ## transactions_transaction_id_delete
@@ -284,7 +215,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 
 ## transactions_transaction_id_get
@@ -352,7 +283,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/json; charset=utf8
 
 
 ## transactions_transaction_id_patch
@@ -422,6 +353,6 @@ end
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: application/json; charset=utf8
+- **Accept**: application/json; charset=utf8
 

@@ -9,11 +9,11 @@ defmodule .Model.PatchBusinessRequest do
 
   @derive [Poison.Encoder]
   defstruct [
-    :name
+    :businessName
   ]
 
   @type t :: %__MODULE__{
-    :name => String.t | nil
+    :businessName => String.t | nil
   }
 end
 

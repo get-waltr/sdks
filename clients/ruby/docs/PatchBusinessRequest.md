@@ -4,7 +4,7 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **String** | I am curious to see if this works with markdown like this link: [to google](https://www.google.com) | [optional] |
+| **business_name** | **String** | I am curious to see if this works with markdown like this link: [to google](https://www.google.com) | [optional] |
 
 ## Example
 
@@ -12,7 +12,7 @@
 require 'openapi_client'
 
 instance = OpenapiClient::PatchBusinessRequest.new(
-  name: null
+  business_name: null
 )
 ```
 

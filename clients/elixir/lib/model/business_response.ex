@@ -10,12 +10,12 @@ defmodule .Model.BusinessResponse do
   @derive [Poison.Encoder]
   defstruct [
     :businessId,
-    :name
+    :businessName
   ]
 
   @type t :: %__MODULE__{
     :businessId => String.t,
-    :name => String.t
+    :businessName => String.t
   }
 end
 

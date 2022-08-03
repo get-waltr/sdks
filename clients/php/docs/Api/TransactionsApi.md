@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**transactionsGet()**](TransactionsApi.md#transactionsGet) | **GET** /transactions | Get all Transactions for a Business
 [**transactionsPost()**](TransactionsApi.md#transactionsPost) | **POST** /transactions | Creates a Transaction for an Business
-[**transactionsStatsGet()**](TransactionsApi.md#transactionsStatsGet) | **GET** /transactions/stats | Get stats for all Transactions
 [**transactionsTransactionIdDelete()**](TransactionsApi.md#transactionsTransactionIdDelete) | **DELETE** /transactions/:transactionId | Delete Transaction for an Business
 [**transactionsTransactionIdGet()**](TransactionsApi.md#transactionsTransactionIdGet) | **GET** /transactions/:transactionId | Get a Transaction for a Business
 [**transactionsTransactionIdPatch()**](TransactionsApi.md#transactionsTransactionIdPatch) | **PATCH** /transactions/:transactionId | Update a Transaction for a Business
@@ -65,7 +64,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json; charset=utf8`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -126,67 +125,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: `application/json`
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `transactionsStatsGet()`
-
-```php
-transactionsStatsGet(): \OpenAPI\Client\Model\TransactionStatsResponse
-```
-
-Get stats for all Transactions
-
-Get stats for all Transactions
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: ApiKeyAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
-
-
-$apiInstance = new OpenAPI\Client\Api\TransactionsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-
-try {
-    $result = $apiInstance->transactionsStatsGet();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TransactionsApi->transactionsStatsGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-This endpoint does not need any parameter.
-
-### Return type
-
-[**\OpenAPI\Client\Model\TransactionStatsResponse**](../Model/TransactionStatsResponse.md)
-
-### Authorization
-
-[ApiKeyAuth](../../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Content-Type**: `application/json; charset=utf8`
+- **Accept**: `application/json; charset=utf8`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -245,7 +185,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json; charset=utf8`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -304,7 +244,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
+- **Accept**: `application/json; charset=utf8`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -365,8 +305,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: `application/json`
-- **Accept**: `application/json`
+- **Content-Type**: `application/json; charset=utf8`
+- **Accept**: `application/json; charset=utf8`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

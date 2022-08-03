@@ -9,8 +9,6 @@ docs/Api/BusinessesApi.md
 docs/Api/TransactionsApi.md
 docs/Api/UsageApi.md
 docs/Model/AccountResponse.md
-docs/Model/AccountStatsResponse.md
-docs/Model/AccountStatsResponseDailyInner.md
 docs/Model/AccountUsageBillingAdjustmentsResponse.md
 docs/Model/AccountUsageBillingAdjustmentsResponseAdjustmentsInner.md
 docs/Model/AllAccountsResponse.md
@@ -20,7 +18,6 @@ docs/Model/AllTransactionsResponseTransactions.md
 docs/Model/BillingType.md
 docs/Model/BusinessResponse.md
 docs/Model/BusinessSettingsResponse.md
-docs/Model/ErrorResponse.md
 docs/Model/PatchAccountRequest.md
 docs/Model/PatchBusinessRequest.md
 docs/Model/PatchBusinessSettingsRequest.md
@@ -30,8 +27,6 @@ docs/Model/PostAccountRequest.md
 docs/Model/PostAccountUsageBillingRateAdjustmentRequest.md
 docs/Model/PostTransactionRequest.md
 docs/Model/TransactionResponse.md
-docs/Model/TransactionStatsResponse.md
-docs/Model/TransactionStatsResponseDailyInner.md
 git_push.sh
 lib/Api/AccountsApi.php
 lib/Api/BusinessesApi.php
@@ -41,8 +36,6 @@ lib/ApiException.php
 lib/Configuration.php
 lib/HeaderSelector.php
 lib/Model/AccountResponse.php
-lib/Model/AccountStatsResponse.php
-lib/Model/AccountStatsResponseDailyInner.php
 lib/Model/AccountUsageBillingAdjustmentsResponse.php
 lib/Model/AccountUsageBillingAdjustmentsResponseAdjustmentsInner.php
 lib/Model/AllAccountsResponse.php
@@ -52,7 +45,6 @@ lib/Model/AllTransactionsResponseTransactions.php
 lib/Model/BillingType.php
 lib/Model/BusinessResponse.php
 lib/Model/BusinessSettingsResponse.php
-lib/Model/ErrorResponse.php
 lib/Model/ModelInterface.php
 lib/Model/PatchAccountRequest.php
 lib/Model/PatchBusinessRequest.php
@@ -63,8 +55,6 @@ lib/Model/PostAccountRequest.php
 lib/Model/PostAccountUsageBillingRateAdjustmentRequest.php
 lib/Model/PostTransactionRequest.php
 lib/Model/TransactionResponse.php
-lib/Model/TransactionStatsResponse.php
-lib/Model/TransactionStatsResponseDailyInner.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
 test/Api/AccountsApiTest.php
@@ -72,8 +62,6 @@ test/Api/BusinessesApiTest.php
 test/Api/TransactionsApiTest.php
 test/Api/UsageApiTest.php
 test/Model/AccountResponseTest.php
-test/Model/AccountStatsResponseDailyInnerTest.php
-test/Model/AccountStatsResponseTest.php
 test/Model/AccountUsageBillingAdjustmentsResponseAdjustmentsInnerTest.php
 test/Model/AccountUsageBillingAdjustmentsResponseTest.php
 test/Model/AllAccountsResponseAccountsTest.php
@@ -83,7 +71,6 @@ test/Model/AllTransactionsResponseTransactionsTest.php
 test/Model/BillingTypeTest.php
 test/Model/BusinessResponseTest.php
 test/Model/BusinessSettingsResponseTest.php
-test/Model/ErrorResponseTest.php
 test/Model/PatchAccountRequestTest.php
 test/Model/PatchBusinessRequestTest.php
 test/Model/PatchBusinessSettingsRequestTest.php
@@ -93,5 +80,3 @@ test/Model/PostAccountRequestTest.php
 test/Model/PostAccountUsageBillingRateAdjustmentRequestTest.php
 test/Model/PostTransactionRequestTest.php
 test/Model/TransactionResponseTest.php
-test/Model/TransactionStatsResponseDailyInnerTest.php
-test/Model/TransactionStatsResponseTest.php

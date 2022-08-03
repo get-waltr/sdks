@@ -5,13 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **BusinessId** | **string** |  | 
-**Name** | **string** |  | 
+**BusinessName** | **string** |  | 
 
 ## Methods
 
 ### NewBusinessResponse
 
-`func NewBusinessResponse(businessId string, name string, ) *BusinessResponse`
+`func NewBusinessResponse(businessId string, businessName string, ) *BusinessResponse`
 
 NewBusinessResponse instantiates a new BusinessResponse object
 This constructor will assign default values to properties that have it defined,
@@ -46,24 +46,24 @@ and a boolean to check if the value has been set.
 SetBusinessId sets BusinessId field to given value.
 
 
-### GetName
+### GetBusinessName
 
-`func (o *BusinessResponse) GetName() string`
+`func (o *BusinessResponse) GetBusinessName() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetBusinessName returns the BusinessName field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetBusinessNameOk
 
-`func (o *BusinessResponse) GetNameOk() (*string, bool)`
+`func (o *BusinessResponse) GetBusinessNameOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetBusinessNameOk returns a tuple with the BusinessName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetBusinessName
 
-`func (o *BusinessResponse) SetName(v string)`
+`func (o *BusinessResponse) SetBusinessName(v string)`
 
-SetName sets Name field to given value.
+SetBusinessName sets BusinessName field to given value.
 
 
 

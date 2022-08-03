@@ -24,7 +24,7 @@ defmodule .Api.Accounts do
   {:ok, map()} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec accounts_account_id_delete(Tesla.Env.client, keyword()) :: {:ok, Map.t} | {:ok, .Model.ErrorResponse.t} | {:error, Tesla.Env.t}
+  @spec accounts_account_id_delete(Tesla.Env.client, keyword()) :: {:ok, Map.t} | {:error, Tesla.Env.t}
   def accounts_account_id_delete(connection, _opts \\ []) do
     %{}
     |> method(:delete)
@@ -33,10 +33,8 @@ defmodule .Api.Accounts do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 404, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 401, %{}},
+      { 404, %{}}
     ])
   end
 
@@ -53,7 +51,7 @@ defmodule .Api.Accounts do
   {:ok, .Model.AccountResponse.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec accounts_account_id_get(Tesla.Env.client, keyword()) :: {:ok, .Model.ErrorResponse.t} | {:ok, .Model.AccountResponse.t} | {:error, Tesla.Env.t}
+  @spec accounts_account_id_get(Tesla.Env.client, keyword()) :: {:ok, Map.t} | {:ok, .Model.AccountResponse.t} | {:error, Tesla.Env.t}
   def accounts_account_id_get(connection, _opts \\ []) do
     %{}
     |> method(:get)
@@ -62,10 +60,8 @@ defmodule .Api.Accounts do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %.Model.AccountResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 404, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 401, %{}},
+      { 404, %{}}
     ])
   end
 
@@ -83,7 +79,7 @@ defmodule .Api.Accounts do
   {:ok, .Model.AccountResponse.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec accounts_account_id_patch(Tesla.Env.client, .Model.PatchAccountRequest.t, keyword()) :: {:ok, .Model.ErrorResponse.t} | {:ok, .Model.AccountResponse.t} | {:error, Tesla.Env.t}
+  @spec accounts_account_id_patch(Tesla.Env.client, .Model.PatchAccountRequest.t, keyword()) :: {:ok, Map.t} | {:ok, .Model.AccountResponse.t} | {:error, Tesla.Env.t}
   def accounts_account_id_patch(connection, patch_account_request, _opts \\ []) do
     %{}
     |> method(:patch)
@@ -93,9 +89,8 @@ defmodule .Api.Accounts do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %.Model.AccountResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 400, %{}},
+      { 401, %{}}
     ])
   end
 
@@ -112,7 +107,7 @@ defmodule .Api.Accounts do
   {:ok, .Model.AllTransactionsResponse.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec accounts_account_id_transactions_get(Tesla.Env.client, keyword()) :: {:ok, .Model.AllTransactionsResponse.t} | {:ok, .Model.ErrorResponse.t} | {:error, Tesla.Env.t}
+  @spec accounts_account_id_transactions_get(Tesla.Env.client, keyword()) :: {:ok, .Model.AllTransactionsResponse.t} | {:ok, Map.t} | {:error, Tesla.Env.t}
   def accounts_account_id_transactions_get(connection, _opts \\ []) do
     %{}
     |> method(:get)
@@ -121,10 +116,8 @@ defmodule .Api.Accounts do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %.Model.AllTransactionsResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 404, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 401, %{}},
+      { 404, %{}}
     ])
   end
 
@@ -141,7 +134,7 @@ defmodule .Api.Accounts do
   {:ok, .Model.AllAccountsResponse.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec accounts_get(Tesla.Env.client, keyword()) :: {:ok, .Model.AllAccountsResponse.t} | {:ok, .Model.ErrorResponse.t} | {:error, Tesla.Env.t}
+  @spec accounts_get(Tesla.Env.client, keyword()) :: {:ok, .Model.AllAccountsResponse.t} | {:ok, Map.t} | {:error, Tesla.Env.t}
   def accounts_get(connection, _opts \\ []) do
     %{}
     |> method(:get)
@@ -150,9 +143,7 @@ defmodule .Api.Accounts do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %.Model.AllAccountsResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 401, %{}}
     ])
   end
 
@@ -170,7 +161,7 @@ defmodule .Api.Accounts do
   {:ok, .Model.AccountResponse.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec accounts_post(Tesla.Env.client, .Model.PostAccountRequest.t, keyword()) :: {:ok, .Model.ErrorResponse.t} | {:ok, .Model.AccountResponse.t} | {:error, Tesla.Env.t}
+  @spec accounts_post(Tesla.Env.client, .Model.PostAccountRequest.t, keyword()) :: {:ok, Map.t} | {:ok, .Model.AccountResponse.t} | {:error, Tesla.Env.t}
   def accounts_post(connection, post_account_request, _opts \\ []) do
     %{}
     |> method(:post)
@@ -180,37 +171,9 @@ defmodule .Api.Accounts do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %.Model.AccountResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 409, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
-    ])
-  end
-
-  @doc """
-  Get stats for all accounts
-  Get stats for all accounts
-
-  ## Parameters
-
-  - connection (.Connection): Connection to server
-  - opts (KeywordList): [optional] Optional parameters
-  ## Returns
-
-  {:ok, .Model.AccountStatsResponse.t} on success
-  {:error, Tesla.Env.t} on failure
-  """
-  @spec accounts_stats_get(Tesla.Env.client, keyword()) :: {:ok, .Model.ErrorResponse.t} | {:ok, .Model.AccountStatsResponse.t} | {:error, Tesla.Env.t}
-  def accounts_stats_get(connection, _opts \\ []) do
-    %{}
-    |> method(:get)
-    |> url("/accounts/stats")
-    |> Enum.into([])
-    |> (&Connection.request(connection, &1)).()
-    |> evaluate_response([
-      { 200, %.Model.AccountStatsResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 400, %{}},
+      { 401, %{}},
+      { 409, %{}}
     ])
   end
 end

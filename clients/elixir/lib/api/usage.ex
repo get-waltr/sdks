@@ -24,7 +24,7 @@ defmodule .Api.Usage do
   {:ok, .Model.AccountUsageBillingAdjustmentsResponse.t} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec accounts_account_id_usage_get(Tesla.Env.client, keyword()) :: {:ok, .Model.AccountUsageBillingAdjustmentsResponse.t} | {:ok, .Model.ErrorResponse.t} | {:error, Tesla.Env.t}
+  @spec accounts_account_id_usage_get(Tesla.Env.client, keyword()) :: {:ok, .Model.AccountUsageBillingAdjustmentsResponse.t} | {:ok, Map.t} | {:error, Tesla.Env.t}
   def accounts_account_id_usage_get(connection, _opts \\ []) do
     %{}
     |> method(:get)
@@ -33,10 +33,8 @@ defmodule .Api.Usage do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %.Model.AccountUsageBillingAdjustmentsResponse{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 404, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 401, %{}},
+      { 404, %{}}
     ])
   end
 
@@ -54,7 +52,7 @@ defmodule .Api.Usage do
   {:ok, map()} on success
   {:error, Tesla.Env.t} on failure
   """
-  @spec accounts_account_id_usage_post(Tesla.Env.client, .Model.PostAccountUsageBillingRateAdjustmentRequest.t, keyword()) :: {:ok, Map.t} | {:ok, .Model.ErrorResponse.t} | {:error, Tesla.Env.t}
+  @spec accounts_account_id_usage_post(Tesla.Env.client, .Model.PostAccountUsageBillingRateAdjustmentRequest.t, keyword()) :: {:ok, Map.t} | {:error, Tesla.Env.t}
   def accounts_account_id_usage_post(connection, post_account_usage_billing_rate_adjustment_request, _opts \\ []) do
     %{}
     |> method(:post)
@@ -64,10 +62,9 @@ defmodule .Api.Usage do
     |> (&Connection.request(connection, &1)).()
     |> evaluate_response([
       { 200, %{}},
-      { 400, %.Model.ErrorResponse{}},
-      { 401, %.Model.ErrorResponse{}},
-      { 404, %.Model.ErrorResponse{}},
-      { 500, %.Model.ErrorResponse{}}
+      { 400, %{}},
+      { 401, %{}},
+      { 404, %{}}
     ])
   end
 end

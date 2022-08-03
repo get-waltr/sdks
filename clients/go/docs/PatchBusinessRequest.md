@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | I am curious to see if this works with markdown like this link: [to google](https://www.google.com) | [optional] 
+**BusinessName** | Pointer to **string** | I am curious to see if this works with markdown like this link: [to google](https://www.google.com) | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewPatchBusinessRequestWithDefaults instantiates a new PatchBusinessRequest obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetBusinessName
 
-`func (o *PatchBusinessRequest) GetName() string`
+`func (o *PatchBusinessRequest) GetBusinessName() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetBusinessName returns the BusinessName field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetBusinessNameOk
 
-`func (o *PatchBusinessRequest) GetNameOk() (*string, bool)`
+`func (o *PatchBusinessRequest) GetBusinessNameOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetBusinessNameOk returns a tuple with the BusinessName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetBusinessName
 
-`func (o *PatchBusinessRequest) SetName(v string)`
+`func (o *PatchBusinessRequest) SetBusinessName(v string)`
 
-SetName sets Name field to given value.
+SetBusinessName sets BusinessName field to given value.
 
-### HasName
+### HasBusinessName
 
-`func (o *PatchBusinessRequest) HasName() bool`
+`func (o *PatchBusinessRequest) HasBusinessName() bool`
 
-HasName returns a boolean if a field has been set.
+HasBusinessName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
